@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3901E099281209980013C628 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3901E098281209980013C628 /* Constants.swift */; };
+		3901E09B28120B390013C628 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3901E09A28120B390013C628 /* SettingsViewController.swift */; };
+		3901E09E281210EE0013C628 /* PresenterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3901E09D281210EE0013C628 /* PresenterManager.swift */; };
 		3943D7062811F3CD0077E231 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3943D7052811F3CD0077E231 /* Helper.swift */; };
 		396ADFB32811B85F00F5A7F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396ADFB22811B85F00F5A7F0 /* AppDelegate.swift */; };
 		396ADFB52811B85F00F5A7F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396ADFB42811B85F00F5A7F0 /* SceneDelegate.swift */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		3901E098281209980013C628 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3901E09A28120B390013C628 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		3901E09D281210EE0013C628 /* PresenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterManager.swift; sourceTree = "<group>"; };
 		3943D7052811F3CD0077E231 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		396ADFAF2811B85F00F5A7F0 /* login-flow-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "login-flow-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		396ADFB22811B85F00F5A7F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3901E09C281210D10013C628 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				3901E09D281210EE0013C628 /* PresenterManager.swift */,
+			);
+			path = manager;
+			sourceTree = "<group>";
+		};
 		3943D7042811F3BB0077E231 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +124,7 @@
 		396ADFB12811B85F00F5A7F0 /* login-flow-sample */ = {
 			isa = PBXGroup;
 			children = (
+				3901E09C281210D10013C628 /* manager */,
 				3943D7042811F3BB0077E231 /* Helper */,
 				396ADFE22811BB6300F5A7F0 /* controller */,
 				396ADFB22811B85F00F5A7F0 /* AppDelegate.swift */,
@@ -145,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				396ADFE32811BBC700F5A7F0 /* LoadingViewController.swift */,
+				3901E09A28120B390013C628 /* SettingsViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -285,6 +299,8 @@
 				396ADFB52811B85F00F5A7F0 /* SceneDelegate.swift in Sources */,
 				396ADFE42811BBC700F5A7F0 /* LoadingViewController.swift in Sources */,
 				3943D7062811F3CD0077E231 /* Helper.swift in Sources */,
+				3901E09E281210EE0013C628 /* PresenterManager.swift in Sources */,
+				3901E09B28120B390013C628 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
