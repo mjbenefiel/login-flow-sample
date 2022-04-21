@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3901E099281209980013C628 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3901E098281209980013C628 /* Constants.swift */; };
 		3943D7062811F3CD0077E231 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3943D7052811F3CD0077E231 /* Helper.swift */; };
 		396ADFB32811B85F00F5A7F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396ADFB22811B85F00F5A7F0 /* AppDelegate.swift */; };
 		396ADFB52811B85F00F5A7F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396ADFB42811B85F00F5A7F0 /* SceneDelegate.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3901E098281209980013C628 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3943D7052811F3CD0077E231 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		396ADFAF2811B85F00F5A7F0 /* login-flow-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "login-flow-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		396ADFB22811B85F00F5A7F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				3943D7052811F3CD0077E231 /* Helper.swift */,
+				3901E098281209980013C628 /* Constants.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3901E099281209980013C628 /* Constants.swift in Sources */,
 				396ADFB32811B85F00F5A7F0 /* AppDelegate.swift in Sources */,
 				396ADFB52811B85F00F5A7F0 /* SceneDelegate.swift in Sources */,
 				396ADFE42811BBC700F5A7F0 /* LoadingViewController.swift in Sources */,
