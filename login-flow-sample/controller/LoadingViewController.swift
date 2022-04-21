@@ -9,7 +9,7 @@ import UIKit
 
 class LoadingViewController: UIViewController {
     
-    private let isUserLoggedIn = false
+    private let isUserLoggedIn = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +18,10 @@ class LoadingViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        showInitialView()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0){
+            self.showInitialView()
+        }
     }
     
     private func setupViews() {
@@ -31,9 +34,10 @@ class LoadingViewController: UIViewController {
         if isUserLoggedIn {
             
             let mainTabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainTabBarController")
-            let sceneDelegate = view.window?.windowScene?.delegate as! SceneDelegate
-            let window = sceneDelegate.window
-            window?.rootViewController = mainTabBarController
+            if let sceneDelegate = view.window?.windowScene?.delegate as? SceneDelegate,
+               let window = sceneDelegate.window {
+                window.rootViewController = mainTabBarController
+            }
             
         } else{
             performSegue(withIdentifier: "showOnboarding", sender: nil)
