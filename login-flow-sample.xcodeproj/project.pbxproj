@@ -15,6 +15,7 @@
 		396ADFCA2811B86100F5A7F0 /* login_flow_sampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396ADFC92811B86100F5A7F0 /* login_flow_sampleTests.swift */; };
 		396ADFD42811B86100F5A7F0 /* login_flow_sampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396ADFD32811B86100F5A7F0 /* login_flow_sampleUITests.swift */; };
 		396ADFD62811B86100F5A7F0 /* login_flow_sampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396ADFD52811B86100F5A7F0 /* login_flow_sampleUITestsLaunchTests.swift */; };
+		396ADFE42811BBC700F5A7F0 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396ADFE32811BBC700F5A7F0 /* LoadingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		396ADFCF2811B86100F5A7F0 /* login-flow-sampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "login-flow-sampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		396ADFD32811B86100F5A7F0 /* login_flow_sampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login_flow_sampleUITests.swift; sourceTree = "<group>"; };
 		396ADFD52811B86100F5A7F0 /* login_flow_sampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login_flow_sampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		396ADFE32811BBC700F5A7F0 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 		396ADFE22811BB6300F5A7F0 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				396ADFE32811BBC700F5A7F0 /* LoadingViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			files = (
 				396ADFB32811B85F00F5A7F0 /* AppDelegate.swift in Sources */,
 				396ADFB52811B85F00F5A7F0 /* SceneDelegate.swift in Sources */,
+				396ADFE42811BBC700F5A7F0 /* LoadingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
