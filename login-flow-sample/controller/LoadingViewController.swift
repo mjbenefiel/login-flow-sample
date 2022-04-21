@@ -34,11 +34,7 @@ class LoadingViewController: UIViewController {
         // if user is not logged in, show onboarding controller
         if isUserLoggedIn {
             
-            let mainTabBarController = UIStoryboard(name: K.storyboardID.main, bundle: nil).instantiateViewController(withIdentifier: K.storyboardID.MainTabBarController)
-            if let sceneDelegate = view.window?.windowScene?.delegate as? SceneDelegate,
-               let window = sceneDelegate.window {
-                window.rootViewController = mainTabBarController
-            }
+            PresenterManager.shared.show(vc: .mainTabBarController)
             
         } else{
             performSegue(withIdentifier: K.Segue.showOnboardingScreen, sender: nil)
