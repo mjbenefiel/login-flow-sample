@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import UIKit
 
 struct K{
     struct Segue{
         static let showOnboardingScreen = "showOnboarding"
+        static let showLoginSignUpScreen = "showLoginSignup"
     }
     
     
@@ -17,5 +19,6 @@ struct K{
         static let main = "Main"
         static let MainTabBarController = "MainTabBarController"
         static let onboardingViewController = "OnboardingViewController"
+        
     }
 }
