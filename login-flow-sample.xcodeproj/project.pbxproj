@@ -20,6 +20,7 @@
 		396ADFD42811B86100F5A7F0 /* login_flow_sampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396ADFD32811B86100F5A7F0 /* login_flow_sampleUITests.swift */; };
 		396ADFD62811B86100F5A7F0 /* login_flow_sampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396ADFD52811B86100F5A7F0 /* login_flow_sampleUITestsLaunchTests.swift */; };
 		396ADFE42811BBC700F5A7F0 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396ADFE32811BBC700F5A7F0 /* LoadingViewController.swift */; };
+		39DBDA68281225AB000D8A7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39DBDA67281225AB000D8A7B /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		396ADFD32811B86100F5A7F0 /* login_flow_sampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login_flow_sampleUITests.swift; sourceTree = "<group>"; };
 		396ADFD52811B86100F5A7F0 /* login_flow_sampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login_flow_sampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		396ADFE32811BBC700F5A7F0 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		39DBDA67281225AB000D8A7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				396ADFB42811B85F00F5A7F0 /* SceneDelegate.swift */,
 				396ADFB82811B85F00F5A7F0 /* Main.storyboard */,
 				396ADFBB2811B86100F5A7F0 /* Assets.xcassets */,
+				39DBDA67281225AB000D8A7B /* Assets.xcassets */,
 				396ADFBD2811B86100F5A7F0 /* LaunchScreen.storyboard */,
 				396ADFC02811B86100F5A7F0 /* Info.plist */,
 			);
@@ -269,6 +272,7 @@
 			files = (
 				396ADFBF2811B86100F5A7F0 /* LaunchScreen.storyboard in Resources */,
 				396ADFBC2811B86100F5A7F0 /* Assets.xcassets in Resources */,
+				39DBDA68281225AB000D8A7B /* Assets.xcassets in Resources */,
 				396ADFBA2811B85F00F5A7F0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

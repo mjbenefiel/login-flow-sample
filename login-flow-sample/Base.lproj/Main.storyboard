@@ -16,15 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iterableLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Bg3-ea-o8I">
+                                <rect key="frame" x="135.5" y="431.5" width="143" height="33"/>
+                            </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="yT6-6K-7gU">
-                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                <rect key="frame" x="197" y="480.5" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="yT6-6K-7gU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ks3-Oc-Fyn"/>
-                            <constraint firstItem="yT6-6K-7gU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lIT-Bc-dNa"/>
+                            <constraint firstItem="Bg3-ea-o8I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="36R-Qs-vOa"/>
+                            <constraint firstItem="Bg3-ea-o8I" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OeG-8i-1Ur"/>
+                            <constraint firstItem="yT6-6K-7gU" firstAttribute="top" secondItem="Bg3-ea-o8I" secondAttribute="bottom" constant="16" id="Rke-9Q-v3c"/>
+                            <constraint firstItem="yT6-6K-7gU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sHI-Ri-O68"/>
                         </constraints>
                     </view>
                     <connections>
@@ -33,7 +38,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2139" y="-413"/>
+            <point key="canvasLocation" x="-2139.130434782609" y="-413.16964285714283"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="8rq-gy-kwP">
@@ -174,6 +179,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="iterableLogo" width="143" height="33"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
