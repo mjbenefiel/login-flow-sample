@@ -104,28 +104,32 @@
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9PH-sg-hHD">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9PH-sg-hHD" secondAttribute="height" multiplier="1:1" id="zRi-Jz-zvy"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PUh-U9-oEB">
-                                    <size key="itemSize" width="279" height="206"/>
+                                    <size key="itemSize" width="279" height="291"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ocm-y1-lmv">
-                                        <rect key="frame" x="67.5" y="0.0" width="279" height="206"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="containerCell" id="c20-83-6Ic">
+                                        <rect key="frame" x="67.5" y="0.0" width="279" height="291"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yib-eC-eL5">
-                                            <rect key="frame" x="0.0" y="0.0" width="279" height="206"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="x6c-t8-S3f">
+                                            <rect key="frame" x="0.0" y="0.0" width="279" height="291"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="279" height="206"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <size key="customSize" width="279" height="291"/>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="lvJ-8W-dyT" id="ojA-b2-MIo"/>
+                                    <outlet property="delegate" destination="lvJ-8W-dyT" id="kn3-He-fvN"/>
+                                </connections>
                             </collectionView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="BUz-OS-4PK">
                                 <rect key="frame" x="149.5" y="430" width="115.5" height="26"/>
@@ -168,6 +172,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="5bq-aN-enA"/>
                     <connections>
+                        <outlet property="collectionView" destination="9PH-sg-hHD" id="4wX-we-1iv"/>
                         <segue destination="Y1e-ap-GGE" kind="showDetail" identifier="showLoginSignup" id="drV-v4-lRL"/>
                     </connections>
                 </viewController>
@@ -252,11 +257,8 @@
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
