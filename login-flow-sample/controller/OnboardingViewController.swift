@@ -39,12 +39,15 @@ class OnboardingViewController: UIViewController {
 
 extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return Slide.collection.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "containerCell", for: indexPath)
-        cell.backgroundColor = indexPath.row % 2 == 0 ? .blue : .red
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "containerCell", for: indexPath) as! OnboardingCollectionViewCell
+       // cell.backgroundColor = indexPath.row % 2 == 0 ? .blue : .red
+        let imageName = Slide.collection[indexPath.item].imageName
+        let image = UIImage(named: imageName) ?? UIImage()
+        cell.configure(image: image)
             return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

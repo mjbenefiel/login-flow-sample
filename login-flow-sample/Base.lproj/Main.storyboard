@@ -104,7 +104,6 @@
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9PH-sg-hHD">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
-                                <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9PH-sg-hHD" secondAttribute="height" multiplier="1:1" id="zRi-Jz-zvy"/>
                                 </constraints>
@@ -115,15 +114,28 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="containerCell" id="c20-83-6Ic">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="containerCell" id="c20-83-6Ic" customClass="OnboardingCollectionViewCell" customModule="login_flow_sample" customModuleProvider="target">
                                         <rect key="frame" x="67.5" y="0.0" width="279" height="291"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="x6c-t8-S3f">
                                             <rect key="frame" x="0.0" y="0.0" width="279" height="291"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="303-tS-lSW">
+                                                    <rect key="frame" x="0.0" y="8" width="279" height="283"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="303-tS-lSW" firstAttribute="leading" secondItem="x6c-t8-S3f" secondAttribute="leading" id="Rfq-le-lGD"/>
+                                                <constraint firstAttribute="bottom" secondItem="303-tS-lSW" secondAttribute="bottom" id="Zne-QC-WPJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="303-tS-lSW" secondAttribute="trailing" id="nch-V4-w7N"/>
+                                                <constraint firstItem="303-tS-lSW" firstAttribute="top" secondItem="x6c-t8-S3f" secondAttribute="top" constant="8" id="v8y-y4-3b2"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <size key="customSize" width="279" height="291"/>
+                                        <connections>
+                                            <outlet property="slideImageView" destination="303-tS-lSW" id="Kwb-nJ-EP8"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -256,9 +268,6 @@
         </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
