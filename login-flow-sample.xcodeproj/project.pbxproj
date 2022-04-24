@@ -92,12 +92,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3901E09C281210D10013C628 /* manager */ = {
+		3901E09C281210D10013C628 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
 				3901E09D281210EE0013C628 /* PresenterManager.swift */,
 			);
-			path = manager;
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		3943D7042811F3BB0077E231 /* Helper */ = {
@@ -134,9 +134,9 @@
 			children = (
 				39D579CB28149E08009A1D32 /* Model */,
 				39D579C828149D71009A1D32 /* Views */,
-				3901E09C281210D10013C628 /* manager */,
+				3901E09C281210D10013C628 /* Manager */,
 				3943D7042811F3BB0077E231 /* Helper */,
-				396ADFE22811BB6300F5A7F0 /* controller */,
+				396ADFE22811BB6300F5A7F0 /* Controller */,
 				396ADFB22811B85F00F5A7F0 /* AppDelegate.swift */,
 				396ADFB42811B85F00F5A7F0 /* SceneDelegate.swift */,
 				396ADFB82811B85F00F5A7F0 /* Main.storyboard */,
@@ -165,14 +165,14 @@
 			path = "login-flow-sampleUITests";
 			sourceTree = "<group>";
 		};
-		396ADFE22811BB6300F5A7F0 /* controller */ = {
+		396ADFE22811BB6300F5A7F0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				396ADFE32811BBC700F5A7F0 /* LoadingViewController.swift */,
 				3901E09A28120B390013C628 /* SettingsViewController.swift */,
 				39846640281330CD00385888 /* OnboardingViewController.swift */,
 			);
-			path = controller;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		39D579C828149D71009A1D32 /* Views */ = {

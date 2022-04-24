@@ -88,7 +88,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t59-el-QDv">
-                                <rect key="frame" x="24" y="722" width="366" height="56"/>
+                                <rect key="frame" x="36" y="722" width="342" height="56"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="9aj-zF-hGR"/>
@@ -122,14 +122,18 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="303-tS-lSW">
-                                                    <rect key="frame" x="0.0" y="8" width="279" height="283"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="279" height="291"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="303-tS-lSW" firstAttribute="leading" secondItem="x6c-t8-S3f" secondAttribute="leading" id="E5h-oB-2m3"/>
+                                                <constraint firstAttribute="trailing" secondItem="303-tS-lSW" secondAttribute="trailing" id="Gch-ZQ-vgZ"/>
+                                                <constraint firstItem="303-tS-lSW" firstAttribute="top" secondItem="x6c-t8-S3f" secondAttribute="top" id="Mox-ee-nRa"/>
                                                 <constraint firstItem="303-tS-lSW" firstAttribute="leading" secondItem="x6c-t8-S3f" secondAttribute="leading" id="Rfq-le-lGD"/>
                                                 <constraint firstAttribute="bottom" secondItem="303-tS-lSW" secondAttribute="bottom" id="Zne-QC-WPJ"/>
                                                 <constraint firstAttribute="trailing" secondItem="303-tS-lSW" secondAttribute="trailing" id="nch-V4-w7N"/>
-                                                <constraint firstItem="303-tS-lSW" firstAttribute="top" secondItem="x6c-t8-S3f" secondAttribute="top" constant="8" id="v8y-y4-3b2"/>
+                                                <constraint firstAttribute="bottom" secondItem="303-tS-lSW" secondAttribute="bottom" id="qbD-Vr-LGA"/>
+                                                <constraint firstItem="303-tS-lSW" firstAttribute="top" secondItem="x6c-t8-S3f" secondAttribute="top" id="v8y-y4-3b2"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="279" height="291"/>
@@ -175,16 +179,19 @@
                             <constraint firstItem="FGq-7A-mRi" firstAttribute="trailing" secondItem="Ymr-6A-B8A" secondAttribute="trailing" constant="24" id="XgR-gj-v6W"/>
                             <constraint firstItem="BUz-OS-4PK" firstAttribute="top" secondItem="9PH-sg-hHD" secondAttribute="bottom" constant="16" id="bOH-VO-8SG"/>
                             <constraint firstItem="Ymr-6A-B8A" firstAttribute="leading" secondItem="FGq-7A-mRi" secondAttribute="leading" constant="24" id="eyZ-ek-mL2"/>
-                            <constraint firstItem="FGq-7A-mRi" firstAttribute="trailing" secondItem="t59-el-QDv" secondAttribute="trailing" constant="24" id="iSl-sN-ugg"/>
+                            <constraint firstItem="FGq-7A-mRi" firstAttribute="trailing" secondItem="t59-el-QDv" secondAttribute="trailing" constant="36" id="iSl-sN-ugg"/>
                             <constraint firstItem="9PH-sg-hHD" firstAttribute="top" secondItem="e92-IV-4cS" secondAttribute="top" id="nmS-Qc-wY2"/>
                             <constraint firstItem="Ymr-6A-B8A" firstAttribute="top" secondItem="BUz-OS-4PK" secondAttribute="bottom" constant="24" id="o44-bW-Xhh"/>
-                            <constraint firstItem="t59-el-QDv" firstAttribute="leading" secondItem="FGq-7A-mRi" secondAttribute="leading" constant="24" id="ogP-Kr-1YT"/>
+                            <constraint firstItem="t59-el-QDv" firstAttribute="leading" secondItem="FGq-7A-mRi" secondAttribute="leading" constant="36" id="ogP-Kr-1YT"/>
                             <constraint firstItem="FGq-7A-mRi" firstAttribute="bottom" secondItem="t59-el-QDv" secondAttribute="bottom" constant="84" id="s1f-4e-tSP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5bq-aN-enA"/>
                     <connections>
                         <outlet property="collectionView" destination="9PH-sg-hHD" id="4wX-we-1iv"/>
+                        <outlet property="descriptionLabel" destination="BiE-CD-SQr" id="ECq-Rg-SX9"/>
+                        <outlet property="pageControl" destination="BUz-OS-4PK" id="jhn-VZ-Rk7"/>
+                        <outlet property="titleLabel" destination="Ksg-1Y-grA" id="v8V-lL-3y9"/>
                         <segue destination="Y1e-ap-GGE" kind="showDetail" identifier="showLoginSignup" id="drV-v4-lRL"/>
                     </connections>
                 </viewController>
