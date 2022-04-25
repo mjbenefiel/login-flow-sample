@@ -9,7 +9,48 @@ import Foundation
 import UIKit
 
 class LoginViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    @IBOutlet weak var forgetPasswordButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var passwordConfirmationTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
+    private enum PageType{
+        case login
+        case signUp
+    }
+    
+   private var currentPageType: PageType = .login{
+        didSet{
+            setupViewsFor(pageType: currentPageType)
+            print (currentPageType)
+        }
+    }
+
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setupViewsFor(pageType: .login)
+    }
+    
+    private func setupViewsFor(pageType: PageType){
+        errorLabel.text = ""
+        passwordConfirmationTextField.isHidden = pageType == .login
+        signUpButton.isHidden = pageType == .login
+        forgetPasswordButton.isHidden = pageType == .signUp
+        loginButton.isHidden = pageType == .signUp
+    }
+    
+    @IBAction func forgetPasswordButtonTapped (_ sender: Any){
+        
+    }
+    
+    @IBAction func segmentedControlChanged(_ sender: UISegmentedControl) {
+        //print(sender.selectedSegmentIndex)
+        currentPageType = sender.selectedSegmentIndex == 0 ? .login : .signUp
     }
 }

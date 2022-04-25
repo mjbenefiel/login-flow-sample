@@ -220,6 +220,7 @@
         <!--Login View Controller-->
         <scene sceneID="JXG-je-hPi">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f1f-Rm-2kr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="Y1e-ap-GGE" customClass="LoginViewController" customModule="login_flow_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rdn-jF-zti">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -238,6 +239,9 @@
                                     <segment title="Login"/>
                                     <segment title="Sign Up"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedControlChanged:" destination="Y1e-ap-GGE" eventType="valueChanged" id="pEv-EX-xJo"/>
+                                </connections>
                             </segmentedControl>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="PFF-Zy-ERv">
                                 <rect key="frame" x="48" y="143" width="318" height="421.5"/>
@@ -276,6 +280,9 @@
                                         <rect key="frame" x="0.0" y="246.5" width="318" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Forget password?"/>
+                                        <connections>
+                                            <action selector="forgetPasswordButtonTapped:" destination="Y1e-ap-GGE" eventType="touchUpInside" id="FII-2O-CfY"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDQ-aH-MXl">
                                         <rect key="frame" x="0.0" y="293.5" width="318" height="56"/>
@@ -316,8 +323,17 @@
                             <constraint firstItem="hk4-9P-6rL" firstAttribute="centerX" secondItem="Rdn-jF-zti" secondAttribute="centerX" id="x5G-jO-LEh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="iml-70-f9e" id="jkw-6I-WHA"/>
+                        <outlet property="errorLabel" destination="b2u-S8-IpQ" id="Swm-3I-FSa"/>
+                        <outlet property="forgetPasswordButton" destination="4G9-iv-asa" id="Kf5-Av-rqP"/>
+                        <outlet property="loginButton" destination="I95-vy-JZs" id="4cQ-UN-d0f"/>
+                        <outlet property="passwordConfirmationTextField" destination="V7O-ha-qQP" id="qc9-p8-Qca"/>
+                        <outlet property="passwordTextField" destination="s1H-OF-bsW" id="QI8-0J-NnO"/>
+                        <outlet property="segmentedControl" destination="bS4-BL-JAZ" id="yLP-6F-KN2"/>
+                        <outlet property="signUpButton" destination="XDQ-aH-MXl" id="lrR-vs-tSw"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f1f-Rm-2kr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-510.14492753623193" y="-413.16964285714283"/>
         </scene>
