@@ -10,6 +10,10 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    weak var delegate: OnboardingDelegate?
+    
+    private let isSuccessfulLogin = true
+    
     @IBOutlet weak var forgetPasswordButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
@@ -47,6 +51,19 @@ class LoginViewController: UIViewController {
     
     @IBAction func forgetPasswordButtonTapped (_ sender: Any){
         
+    }
+    
+    
+    @IBAction func signUpButtonTap(_ sender: Any) {
+    }
+    
+    
+    @IBAction func loginButtonTap(_ sender: Any) {
+        if isSuccessfulLogin{
+            delegate?.showMainTabBarController()
+        } else {
+            print("hey")
+        }
     }
     
     @IBAction func segmentedControlChanged(_ sender: UISegmentedControl) {

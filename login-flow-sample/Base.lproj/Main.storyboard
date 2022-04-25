@@ -220,7 +220,6 @@
         <!--Login View Controller-->
         <scene sceneID="JXG-je-hPi">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f1f-Rm-2kr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="Y1e-ap-GGE" customClass="LoginViewController" customModule="login_flow_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rdn-jF-zti">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -295,6 +294,9 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="signUpButtonTap:" destination="Y1e-ap-GGE" eventType="touchUpInside" id="8KQ-Xh-AC4"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I95-vy-JZs">
                                         <rect key="frame" x="0.0" y="365.5" width="318" height="56"/>
@@ -307,6 +309,9 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="loginButtonTap:" destination="Y1e-ap-GGE" eventType="touchUpInside" id="YIZ-XH-Lp6"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -334,6 +339,7 @@
                         <outlet property="signUpButton" destination="XDQ-aH-MXl" id="lrR-vs-tSw"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f1f-Rm-2kr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-510.14492753623193" y="-413.16964285714283"/>
         </scene>

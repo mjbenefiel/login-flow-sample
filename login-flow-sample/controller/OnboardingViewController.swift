@@ -8,6 +8,12 @@
 import Foundation
 import UIKit
 
+protocol OnboardingDelegate: AnyObject {
+    
+    func showMainTabBarController()
+    
+}
+
 class OnboardingViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -45,6 +51,16 @@ class OnboardingViewController: UIViewController {
         performSegue(withIdentifier: K.Segue.showLoginSignUpScreen, sender: nil)
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == K.Segue.showLoginSignUpScreen {
+            if let destination = segue.destination as? LoginViewController {
+                destination.delegate = self
+            }
+        }
+    }
+
+    
     private func showCaption(atIndex index: Int){
         let slide = Slide.collection[index]
         titleLabel.text = slide.title
@@ -81,4 +97,17 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
     }
 }
 
+extension OnboardingViewController: OnboardingDelegate {
+    func showMainTabBarController() {
+        //dismiss loginviewcontroller
+        //show maintab bar
+        if let loginViewController = self.presentedViewController as? LoginViewController {
+            loginViewController.dismiss(animated: true) {
+            PresenterManager.shared.show(vc: .mainTabBarController)
+            }
+        }
+        
+        
+    }
+}
 
