@@ -10,6 +10,7 @@
 		3901E099281209980013C628 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3901E098281209980013C628 /* Constants.swift */; };
 		3901E09B28120B390013C628 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3901E09A28120B390013C628 /* SettingsViewController.swift */; };
 		3901E09E281210EE0013C628 /* PresenterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3901E09D281210EE0013C628 /* PresenterManager.swift */; };
+		3909B6F62817069E00C2A49C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3909B6F52817069E00C2A49C /* LoginViewController.swift */; };
 		3943D7062811F3CD0077E231 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3943D7052811F3CD0077E231 /* Helper.swift */; };
 		396ADFB32811B85F00F5A7F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396ADFB22811B85F00F5A7F0 /* AppDelegate.swift */; };
 		396ADFB52811B85F00F5A7F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396ADFB42811B85F00F5A7F0 /* SceneDelegate.swift */; };
@@ -47,6 +48,7 @@
 		3901E098281209980013C628 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3901E09A28120B390013C628 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3901E09D281210EE0013C628 /* PresenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterManager.swift; sourceTree = "<group>"; };
+		3909B6F52817069E00C2A49C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3943D7052811F3CD0077E231 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		396ADFAF2811B85F00F5A7F0 /* login-flow-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "login-flow-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		396ADFB22811B85F00F5A7F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				396ADFE32811BBC700F5A7F0 /* LoadingViewController.swift */,
 				3901E09A28120B390013C628 /* SettingsViewController.swift */,
 				39846640281330CD00385888 /* OnboardingViewController.swift */,
+				3909B6F52817069E00C2A49C /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				3901E09B28120B390013C628 /* SettingsViewController.swift in Sources */,
 				39D579CA28149D7F009A1D32 /* OnboardingCollectionViewCell.swift in Sources */,
 				39D579CD28149E3C009A1D32 /* Slide.swift in Sources */,
+				3909B6F62817069E00C2A49C /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
