@@ -111,20 +111,6 @@ class LoginViewController: UIViewController {
             }
         }
         
-        
-        
-//        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
-//            MBProgressHUD.hide(for: self.view, animated: true)
-//            if let error = error {
-//                self.showErrorMessageIfNeeded(text: error.localizedDescription)
-//                print(error.localizedDescription)
-//            } else if let _ = result?.user.uid{
-//
-//                self.delegate?.showMainTabBarController()
-//
-//                //print ("userId created: \(userId)")
-//            }
-//        }
     }
     
     

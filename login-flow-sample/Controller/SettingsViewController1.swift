@@ -9,12 +9,19 @@ import Foundation
 import UIKit
 import MBProgressHUD
 import FirebaseAuth
+import Loaf
 
 class SettingsViewController1: UIViewController{
+    
+    private let authManager = AuthManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
+        
     }
+    
+    
     
     private func setupNavigationBar(){
         self.title = K.NavigationTitle.settings
@@ -26,14 +33,14 @@ class SettingsViewController1: UIViewController{
         MBProgressHUD.showAdded(to: view, animated: true)
         delay(durationInSeconds: 0.5) {
             
-            do {
-                try Auth.auth().signOut()
-                MBProgressHUD.hide(for: self.view, animated: true)
+            let result = self.authManager.logoutUser()
+            switch result {
+            case .success:
                 PresenterManager.shared.show(vc: .onboarding )
-            } catch(let error) {
-                print(error.localizedDescription)
-                MBProgressHUD.hide(for: self.view, animated: true)
+            case .failure(let error):
+                Loaf(error.localizedDescription, state: .error, location: .top, sender: self).show()
             }
+            MBProgressHUD.hide(for: self.view, animated: true)
             
         }
         

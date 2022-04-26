@@ -40,4 +40,15 @@ struct AuthManager{
             }
         }
     }
+    
+    func logoutUser() -> Result<Void, Error> {
+        
+        do {
+            try Auth.auth().signOut()
+            return .success(())
+            
+        } catch(let error) {
+            return .failure(error)
+        }
+    }
 }
