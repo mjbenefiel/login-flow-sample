@@ -73,10 +73,25 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func signUpButtonTap(_ sender: Any) {
-        let email = "mike@test.com"
-        let password = "123456789"
+        guard let email = emailTextField.text, !email.isEmpty,
+        let password = passwordTextField.text, !password.isEmpty,
+        let passwordConfirmation = passwordConfirmationTextField.text, !passwordConfirmation.isEmpty else{
+        showErrorMessageIfNeeded(text: "Invalid form")
+        return
+        }
+        
+        guard password == passwordConfirmation else{
+            showErrorMessageIfNeeded(text: "Passwords are incorrect")
+            return
+        }
+        
+        print("email: \(email), \(password)")
+        
+        
         Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+            
             if let error = error {
+                self.showErrorMessageIfNeeded(text: error.localizedDescription)
                 print(error.localizedDescription)
             } else {
                 print ("successful user creation: \(String(describing: result?.user.uid))")
