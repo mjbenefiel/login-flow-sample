@@ -23,15 +23,6 @@ class SettingsViewController1: UIViewController{
     
     @IBAction func logoutButtonTapped(_ sender: UIBarButtonItem){
         
-//        let firebaseAuth = Auth.auth()
-//        do {
-//            try firebaseAuth.signOut()
-//        } catch let signOutError as NSError {
-//            print("Error signing out: %@", signOutError)
-//        }
-        
-
-        
         MBProgressHUD.showAdded(to: view, animated: true)
         delay(durationInSeconds: 0.5) {
             
