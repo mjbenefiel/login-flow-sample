@@ -25,7 +25,6 @@
 		396ADFE42811BBC700F5A7F0 /* LoadingViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396ADFE32811BBC700F5A7F0 /* LoadingViewController1.swift */; };
 		39846641281330CD00385888 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39846640281330CD00385888 /* OnboardingViewController.swift */; };
 		3986B94128184A0000EF782E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3986B94028184A0000EF782E /* HomeViewController.swift */; };
-		3986B9432818530C00EF782E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3986B9422818530C00EF782E /* GoogleService-Info.plist */; };
 		39D579CA28149D7F009A1D32 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D579C928149D7F009A1D32 /* OnboardingCollectionViewCell.swift */; };
 		39D579CD28149E3C009A1D32 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D579CC28149E3C009A1D32 /* Slide.swift */; };
 		39DBDA68281225AB000D8A7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39DBDA67281225AB000D8A7B /* Assets.xcassets */; };
@@ -73,7 +72,6 @@
 		396ADFE32811BBC700F5A7F0 /* LoadingViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController1.swift; sourceTree = "<group>"; };
 		39846640281330CD00385888 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		3986B94028184A0000EF782E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		3986B9422818530C00EF782E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		39D579C928149D7F009A1D32 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		39D579CC28149E3C009A1D32 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		39DBDA67281225AB000D8A7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -169,7 +167,6 @@
 				396ADFBB2811B86100F5A7F0 /* Assets.xcassets */,
 				39DBDA67281225AB000D8A7B /* Assets.xcassets */,
 				396ADFBD2811B86100F5A7F0 /* LaunchScreen.storyboard */,
-				3986B9422818530C00EF782E /* GoogleService-Info.plist */,
 				396ADFC02811B86100F5A7F0 /* Info.plist */,
 			);
 			path = "login-flow-sample";
@@ -357,7 +354,6 @@
 				396ADFBC2811B86100F5A7F0 /* Assets.xcassets in Resources */,
 				39DBDA68281225AB000D8A7B /* Assets.xcassets in Resources */,
 				396ADFBA2811B85F00F5A7F0 /* Main.storyboard in Resources */,
-				3986B9432818530C00EF782E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
