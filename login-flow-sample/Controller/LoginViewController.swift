@@ -13,6 +13,7 @@ import FirebaseAuth
 class LoginViewController: UIViewController {
     
     weak var delegate: OnboardingDelegate?
+    private let authManager = AuthManager()
     
     //private let isSuccessfulLogin = true
     
@@ -69,6 +70,18 @@ class LoginViewController: UIViewController {
     
     @IBAction func forgetPasswordButtonTapped (_ sender: Any){
         
+        let alertController = UIAlertController(title: "Forget Password", message: "Please enter your email address", preferredStyle: .alert)
+        alertController.addTextField(configurationHandler: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            if let textField = alertController.textFields?.first,
+                let email = textField.text, !email.isEmpty {
+                print("process this email: \(email)")
+            }
+        }
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
     }
     
     
@@ -85,22 +98,33 @@ class LoginViewController: UIViewController {
             return
         }
         
-        print("email: \(email), \(password)")
+        //print("email: \(email), \(password)")
         MBProgressHUD.showAdded(to: view, animated: true)
-        
-        
-        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+        authManager.signUpNewUser(withEmail: email, password: password) { (result) in
             MBProgressHUD.hide(for: self.view, animated: true)
-            if let error = error {
-                self.showErrorMessageIfNeeded(text: error.localizedDescription)
-                print(error.localizedDescription)
-            } else if let userId = result?.user.uid{
-                
+            switch result {
+            case .success:
                 self.delegate?.showMainTabBarController()
-                
-                print ("userId created: \(userId)")
+                //print(user.email)
+            case .failure(let error):
+                self.showErrorMessageIfNeeded(text: error.localizedDescription)
             }
         }
+        
+        
+        
+//        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+//            MBProgressHUD.hide(for: self.view, animated: true)
+//            if let error = error {
+//                self.showErrorMessageIfNeeded(text: error.localizedDescription)
+//                print(error.localizedDescription)
+//            } else if let _ = result?.user.uid{
+//
+//                self.delegate?.showMainTabBarController()
+//
+//                //print ("userId created: \(userId)")
+//            }
+//        }
     }
     
     
@@ -115,12 +139,13 @@ class LoginViewController: UIViewController {
         
         MBProgressHUD.showAdded(to: view, animated: true)
         
-        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+        authManager.loginUser(withEmail: email, password: password) { (result) in
             MBProgressHUD.hide(for: self.view, animated: true)
-            if let error = error {
-                self.showErrorMessageIfNeeded(text: error.localizedDescription)
-            } else if let _ = result?.user.uid {
+            switch result {
+            case .success:
                 self.delegate?.showMainTabBarController()
+            case .failure(let error):
+                self.showErrorMessageIfNeeded(text: error.localizedDescription)
                 
             }
         }
