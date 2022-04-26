@@ -41,6 +41,19 @@ struct AuthManager{
         }
     }
     
+    func resetPassword(withEmail email: String, completion: @escaping (Result<Void, Error>) -> Void){
+        Auth.auth().sendPasswordReset(withEmail: email) { (error) in
+            if let error = error {
+                completion(.failure(error))
+            } else {
+                completion(.success(()))
+            }
+        }
+        
+        
+        
+    }
+    
     func logoutUser() -> Result<Void, Error> {
         
         do {

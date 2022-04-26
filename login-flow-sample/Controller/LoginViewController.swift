@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import MBProgressHUD
 import FirebaseAuth
+import Loaf
 
 class LoginViewController: UIViewController {
     
@@ -76,12 +77,28 @@ class LoginViewController: UIViewController {
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             if let textField = alertController.textFields?.first,
                 let email = textField.text, !email.isEmpty {
+                self.authManager.resetPassword(withEmail: email) { (result) in
+                    switch result {
+                    case .success:
+                        self.showAlert(title: "Password Reset Successful", message: "Please check your email to find reset link")
+                        print("Success")
+                    case .failure(let error):
+                        Loaf(error.localizedDescription, state: .error, location: .top, sender: self).show()
+                    }
+                }
                 print("process this email: \(email)")
             }
         }
         alertController.addAction(okAction)
         alertController.addAction(cancelAction)
         present(alertController, animated: true, completion: nil)
+    }
+    
+    private func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil )
     }
     
     
