@@ -35,20 +35,20 @@ class LoginViewController: UIViewController {
         }
     }
     
-   private var currentPageType: PageType = .login{
+    private var currentPageType: PageType = .login{
         didSet{
             setupViewsFor(pageType: currentPageType)
             print (currentPageType)
         }
     }
-
+    
     override func viewDidLoad(){
         super.viewDidLoad()
         setupViewsFor(pageType: .login)
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-       //setupViewsFor(pageType: .login)
+        //setupViewsFor(pageType: .login)
         emailTextField.becomeFirstResponder()
     }
     
@@ -76,6 +76,7 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func loginButtonTap(_ sender: Any) {
+        view.endEditing(true)
         MBProgressHUD.showAdded(to: view, animated: true)
         delay(durationInSeconds: 2.0) {
             MBProgressHUD.hide(for: self.view, animated: true)
@@ -86,7 +87,7 @@ class LoginViewController: UIViewController {
             }
         }
         
-
+        
     }
     
     @IBAction func segmentedControlChanged(_ sender: UISegmentedControl) {

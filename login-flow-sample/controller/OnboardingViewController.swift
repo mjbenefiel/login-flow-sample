@@ -23,9 +23,9 @@ class OnboardingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       setupViews()
-       setupPageControl()
-       setupCollectionView()
+        setupViews()
+        setupPageControl()
+        setupCollectionView()
     }
     
     private func setupCollectionView(){
@@ -43,11 +43,11 @@ class OnboardingViewController: UIViewController {
     
     private func setupViews(){
         view.backgroundColor = .systemGroupedBackground
-     
+        
     }
     
     @IBAction func getStartedButtonTapped(_sender: UIButton){
-       // print("get started button tapped")
+        // print("get started button tapped")
         performSegue(withIdentifier: K.Segue.showLoginSignUpScreen, sender: nil)
         
     }
@@ -59,7 +59,7 @@ class OnboardingViewController: UIViewController {
             }
         }
     }
-
+    
     
     private func showCaption(atIndex index: Int){
         let slide = Slide.collection[index]
@@ -78,11 +78,11 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
         
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "containerCell", for: indexPath) as? OnboardingCollectionViewCell else { return UICollectionViewCell()}
-       // cell.backgroundColor = indexPath.row % 2 == 0 ? .blue : .red
+        // cell.backgroundColor = indexPath.row % 2 == 0 ? .blue : .red
         let imageName = Slide.collection[indexPath.item].imageName
         let image = UIImage(named: imageName) ?? UIImage()
         cell.configure(image: image)
-            return cell
+        return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return collectionView.frame.size
@@ -105,7 +105,7 @@ extension OnboardingViewController: OnboardingDelegate {
         //show maintab bar
         if let loginViewController = self.presentedViewController as? LoginViewController {
             loginViewController.dismiss(animated: true) {
-            PresenterManager.shared.show(vc: .mainTabBarController)
+                PresenterManager.shared.show(vc: .mainTabBarController)
             }
         }
         

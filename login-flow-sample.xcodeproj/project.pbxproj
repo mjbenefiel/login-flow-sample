@@ -22,9 +22,10 @@
 		396ADFCA2811B86100F5A7F0 /* login_flow_sampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396ADFC92811B86100F5A7F0 /* login_flow_sampleTests.swift */; };
 		396ADFD42811B86100F5A7F0 /* login_flow_sampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396ADFD32811B86100F5A7F0 /* login_flow_sampleUITests.swift */; };
 		396ADFD62811B86100F5A7F0 /* login_flow_sampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396ADFD52811B86100F5A7F0 /* login_flow_sampleUITestsLaunchTests.swift */; };
-		396ADFE42811BBC700F5A7F0 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396ADFE32811BBC700F5A7F0 /* LoadingViewController.swift */; };
+		396ADFE42811BBC700F5A7F0 /* LoadingViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396ADFE32811BBC700F5A7F0 /* LoadingViewController1.swift */; };
 		39846641281330CD00385888 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39846640281330CD00385888 /* OnboardingViewController.swift */; };
 		3986B94128184A0000EF782E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3986B94028184A0000EF782E /* HomeViewController.swift */; };
+		3986B9432818530C00EF782E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3986B9422818530C00EF782E /* GoogleService-Info.plist */; };
 		39D579CA28149D7F009A1D32 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D579C928149D7F009A1D32 /* OnboardingCollectionViewCell.swift */; };
 		39D579CD28149E3C009A1D32 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D579CC28149E3C009A1D32 /* Slide.swift */; };
 		39DBDA68281225AB000D8A7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39DBDA67281225AB000D8A7B /* Assets.xcassets */; };
@@ -54,7 +55,7 @@
 		3901E098281209980013C628 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3901E09D281210EE0013C628 /* PresenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterManager.swift; sourceTree = "<group>"; };
 		3909B6F52817069E00C2A49C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		3926B17328176B24006DE2F4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		3926B17328176B24006DE2F4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3943D7052811F3CD0077E231 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		394B37A028176F9D00395FEB /* SettingsViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController1.swift; sourceTree = "<group>"; };
 		396ADFAF2811B85F00F5A7F0 /* login-flow-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "login-flow-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,9 +70,10 @@
 		396ADFCF2811B86100F5A7F0 /* login-flow-sampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "login-flow-sampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		396ADFD32811B86100F5A7F0 /* login_flow_sampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login_flow_sampleUITests.swift; sourceTree = "<group>"; };
 		396ADFD52811B86100F5A7F0 /* login_flow_sampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login_flow_sampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		396ADFE32811BBC700F5A7F0 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		396ADFE32811BBC700F5A7F0 /* LoadingViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController1.swift; sourceTree = "<group>"; };
 		39846640281330CD00385888 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		3986B94028184A0000EF782E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3986B9422818530C00EF782E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		39D579C928149D7F009A1D32 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		39D579CC28149E3C009A1D32 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		39DBDA67281225AB000D8A7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				396ADFBB2811B86100F5A7F0 /* Assets.xcassets */,
 				39DBDA67281225AB000D8A7B /* Assets.xcassets */,
 				396ADFBD2811B86100F5A7F0 /* LaunchScreen.storyboard */,
+				3986B9422818530C00EF782E /* GoogleService-Info.plist */,
 				396ADFC02811B86100F5A7F0 /* Info.plist */,
 			);
 			path = "login-flow-sample";
@@ -192,7 +195,7 @@
 		396ADFE22811BB6300F5A7F0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				396ADFE32811BBC700F5A7F0 /* LoadingViewController.swift */,
+				396ADFE32811BBC700F5A7F0 /* LoadingViewController1.swift */,
 				39846640281330CD00385888 /* OnboardingViewController.swift */,
 				3909B6F52817069E00C2A49C /* LoginViewController.swift */,
 				394B37A028176F9D00395FEB /* SettingsViewController1.swift */,
@@ -354,6 +357,7 @@
 				396ADFBC2811B86100F5A7F0 /* Assets.xcassets in Resources */,
 				39DBDA68281225AB000D8A7B /* Assets.xcassets in Resources */,
 				396ADFBA2811B85F00F5A7F0 /* Main.storyboard in Resources */,
+				3986B9432818530C00EF782E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,7 +490,7 @@
 				394B37A128176F9D00395FEB /* SettingsViewController1.swift in Sources */,
 				396ADFB52811B85F00F5A7F0 /* SceneDelegate.swift in Sources */,
 				39846641281330CD00385888 /* OnboardingViewController.swift in Sources */,
-				396ADFE42811BBC700F5A7F0 /* LoadingViewController.swift in Sources */,
+				396ADFE42811BBC700F5A7F0 /* LoadingViewController1.swift in Sources */,
 				3943D7062811F3CD0077E231 /* Helper.swift in Sources */,
 				3901E09E281210EE0013C628 /* PresenterManager.swift in Sources */,
 				39D579CA28149D7F009A1D32 /* OnboardingCollectionViewCell.swift in Sources */,
