@@ -9,6 +9,12 @@ import Foundation
 import UIKit
 
 struct K{
+    
+    struct NavigationTitle {
+        static let settings = "Settings"
+        static let home = "Home"
+    }
+    
     struct Segue{
         static let showOnboardingScreen = "showOnboarding"
         static let showLoginSignUpScreen = "showLoginSignup"
