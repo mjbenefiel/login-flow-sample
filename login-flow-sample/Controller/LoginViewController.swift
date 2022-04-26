@@ -107,11 +107,6 @@ class LoginViewController: UIViewController {
     @IBAction func loginButtonTap(_ sender: Any) {
         view.endEditing(true)
        
-        //        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
-        //          guard let strongSelf = self else { return }
-        //          // ...
-        //        }
-        
         guard let email = emailTextField.text, !email.isEmpty,
               let password = passwordTextField.text, !password.isEmpty else {
             showErrorMessageIfNeeded(text: "Invalid form")
@@ -129,19 +124,6 @@ class LoginViewController: UIViewController {
                 
             }
         }
-        
-        
-        
-        
-        //        delay(durationInSeconds: 2.0) {
-        //            MBProgressHUD.hide(for: self.view, animated: true)
-        //            if self.isSuccessfulLogin{
-        //                self.delegate?.showMainTabBarController()
-        //            } else {
-        //                self.errorMessage = "Your password is invalid. Please try again."
-        //            }
-        //        }
-        
         
     }
     

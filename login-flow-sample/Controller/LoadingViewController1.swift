@@ -16,7 +16,6 @@ class LoadingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // setupViews()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -28,10 +27,6 @@ class LoadingViewController: UIViewController {
         
     }
     
-    //    private func setupViews() {
-    //        view.backgroundColor = .orange
-    //    }
-    //
     private func showInitialView() {
         //if user is logged in, show main tab bar controller
         // if user is not logged in, show onboarding controller
