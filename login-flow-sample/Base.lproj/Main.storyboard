@@ -41,10 +41,10 @@
             </objects>
             <point key="canvasLocation" x="-2139.130434782609" y="-413.16964285714283"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Settings View Controller1-->
         <scene sceneID="8rq-gy-kwP">
             <objects>
-                <viewController id="clf-Mi-CfJ" customClass="SettingsViewController" customModule="login_flow_sample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="clf-Mi-CfJ" customClass="SettingsViewController1" customModule="login_flow_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Qv-A6-14k">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
