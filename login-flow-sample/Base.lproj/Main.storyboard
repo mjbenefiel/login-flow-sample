@@ -70,10 +70,29 @@
                     <view key="view" contentMode="scaleToFill" id="sY2-Fg-iVb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9j-Jr-77x">
+                                <rect key="frame" x="24" y="436" width="366" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="hez-XP-5tv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="eeg-MT-46r"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eeg-MT-46r" firstAttribute="trailing" secondItem="N9j-Jr-77x" secondAttribute="trailing" constant="24" id="Qpz-rP-63L"/>
+                            <constraint firstItem="N9j-Jr-77x" firstAttribute="centerY" secondItem="sY2-Fg-iVb" secondAttribute="centerY" id="fjf-vU-4jh"/>
+                            <constraint firstItem="N9j-Jr-77x" firstAttribute="leading" secondItem="eeg-MT-46r" secondAttribute="leading" constant="24" id="ndp-Mu-sO6"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Nmz-ho-hVf"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="N9j-Jr-77x" id="0Ko-M5-xkh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6p-yf-5u1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -269,7 +288,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your credentials are incorrect" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2u-S8-IpQ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your credentials are incorrect" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2u-S8-IpQ">
                                         <rect key="frame" x="0.0" y="216" width="318" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" systemColor="systemRedColor"/>

@@ -74,10 +74,10 @@ class LoginViewController: UIViewController {
     
     @IBAction func signUpButtonTap(_ sender: Any) {
         guard let email = emailTextField.text, !email.isEmpty,
-        let password = passwordTextField.text, !password.isEmpty,
-        let passwordConfirmation = passwordConfirmationTextField.text, !passwordConfirmation.isEmpty else{
-        showErrorMessageIfNeeded(text: "Invalid form")
-        return
+              let password = passwordTextField.text, !password.isEmpty,
+              let passwordConfirmation = passwordConfirmationTextField.text, !passwordConfirmation.isEmpty else{
+            showErrorMessageIfNeeded(text: "Invalid form")
+            return
         }
         
         guard password == passwordConfirmation else{
@@ -86,15 +86,19 @@ class LoginViewController: UIViewController {
         }
         
         print("email: \(email), \(password)")
+        MBProgressHUD.showAdded(to: view, animated: true)
         
         
         Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
-            
+            MBProgressHUD.hide(for: self.view, animated: true)
             if let error = error {
                 self.showErrorMessageIfNeeded(text: error.localizedDescription)
                 print(error.localizedDescription)
-            } else {
-                print ("successful user creation: \(String(describing: result?.user.uid))")
+            } else if let userId = result?.user.uid{
+                
+                self.delegate?.showMainTabBarController()
+                
+                print ("userId created: \(userId)")
             }
         }
     }
