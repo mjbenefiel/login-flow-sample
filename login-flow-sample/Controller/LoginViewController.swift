@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 import MBProgressHUD
-import FirebaseAuth
 import Loaf
 
 class LoginViewController: UIViewController {
