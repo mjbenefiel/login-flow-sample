@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
     
     weak var delegate: OnboardingDelegate?
     
-    private let isSuccessfulLogin = false
+    private let isSuccessfulLogin = true
     
     @IBOutlet weak var forgetPasswordButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
@@ -72,11 +72,17 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func loginButtonTap(_ sender: Any) {
-        if isSuccessfulLogin{
-            delegate?.showMainTabBarController()
-        } else {
-            errorMessage = "Your password is invalid. Please try again."
+        MBProgressHUD.showAdded(to: view, animated: true)
+        delay(durationInSeconds: 2.0) {
+            MBProgressHUD.hide(for: self.view, animated: true)
+            if self.isSuccessfulLogin{
+                self.delegate?.showMainTabBarController()
+            } else {
+                self.errorMessage = "Your password is invalid. Please try again."
+            }
         }
+        
+
     }
     
     @IBAction func segmentedControlChanged(_ sender: UISegmentedControl) {
