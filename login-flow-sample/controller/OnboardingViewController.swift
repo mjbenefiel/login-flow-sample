@@ -75,7 +75,9 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "containerCell", for: indexPath) as! OnboardingCollectionViewCell
+        
+        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "containerCell", for: indexPath) as? OnboardingCollectionViewCell else { return UICollectionViewCell()}
        // cell.backgroundColor = indexPath.row % 2 == 0 ? .blue : .red
         let imageName = Slide.collection[indexPath.item].imageName
         let image = UIImage(named: imageName) ?? UIImage()

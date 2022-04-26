@@ -42,10 +42,14 @@ class LoginViewController: UIViewController {
         }
     }
 
-    
+    override func viewDidLoad(){
+        super.viewDidLoad()
+        setupViewsFor(pageType: .login)
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        setupViewsFor(pageType: .login)
+       //setupViewsFor(pageType: .login)
+        emailTextField.becomeFirstResponder()
     }
     
     private func setupViewsFor(pageType: PageType){
