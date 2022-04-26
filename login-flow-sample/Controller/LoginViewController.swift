@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import MBProgressHUD
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
@@ -72,6 +73,15 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func signUpButtonTap(_ sender: Any) {
+        let email = "mike@test.com"
+        let password = "123456789"
+        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                print ("successful user creation: \(String(describing: result?.user.uid))")
+            }
+        }
     }
     
     
