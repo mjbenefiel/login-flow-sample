@@ -61,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XET-7O-7ed" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2544.9275362318845" y="-56.25"/>
+            <point key="canvasLocation" x="2545" y="-56"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="rOd-gF-050">
@@ -229,6 +229,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="VfA-N1-DPK" kind="relationship" relationship="viewControllers" id="620-a7-4rI"/>
+                        <segue destination="ZcL-mD-KUT" kind="relationship" relationship="viewControllers" id="UsR-Rb-E3H"/>
                         <segue destination="z3p-2H-Icg" kind="relationship" relationship="viewControllers" id="N71-IN-yQL"/>
                     </connections>
                 </tabBarController>
@@ -383,7 +384,33 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C40-8x-QPN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1634.7826086956522" y="-56.25"/>
+            <point key="canvasLocation" x="1580" y="-56"/>
+        </scene>
+        <!--Shop View Controller-->
+        <scene sceneID="yNP-pi-e56">
+            <objects>
+                <viewController id="KNg-L5-H7j" customClass="ShopViewController" customModule="login_flow_sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JlF-dM-vPy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shopping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9A-C8-aD9">
+                                <rect key="frame" x="171" y="438" width="73" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qvM-uq-Q9c"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HT2-Q4-o29"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e8C-Xf-kwR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="829" y="407"/>
         </scene>
         <!--Home-->
         <scene sceneID="1N0-PI-ywY">
@@ -404,12 +431,33 @@
             </objects>
             <point key="canvasLocation" x="1634.7826086956522" y="-716.51785714285711"/>
         </scene>
+        <!--Shop-->
+        <scene sceneID="b9y-dP-fhb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZcL-mD-KUT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Shop" image="shop" id="Piq-Dl-N10"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pfc-e9-gfN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KNg-L5-H7j" kind="relationship" relationship="rootViewController" id="HFj-p3-qpg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zYL-9W-ywV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-81" y="408"/>
+        </scene>
     </scenes>
     <resources>
         <image name="home" width="32" height="32"/>
         <image name="icEqual" width="512" height="512"/>
         <image name="iterableLogo" width="143" height="33"/>
         <image name="settings" width="32" height="32"/>
+        <image name="shop" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -13,6 +13,7 @@ struct K{
     struct NavigationTitle {
         static let settings = "Settings"
         static let home = "Home"
+        static let shop = "Shop"
     }
     
     struct Segue{
