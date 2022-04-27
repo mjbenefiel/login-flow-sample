@@ -24,7 +24,7 @@ class HomeViewController: UIViewController {
     
     private func setupViews() {
         if let email = Auth.auth().currentUser?.email{
-            emailLabel.text = email
+            emailLabel.text = "Welcome, \(email)"
         } else {
             emailLabel.text = "Something is wrong"
         }

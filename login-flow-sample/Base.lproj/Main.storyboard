@@ -71,8 +71,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9j-Jr-77x">
-                                <rect key="frame" x="24" y="436" width="366" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9j-Jr-77x">
+                                <rect key="frame" x="18" y="96" width="82.5" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="hez-XP-5tv"/>
                                 </constraints>
@@ -84,9 +84,8 @@
                         <viewLayoutGuide key="safeArea" id="eeg-MT-46r"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="eeg-MT-46r" firstAttribute="trailing" secondItem="N9j-Jr-77x" secondAttribute="trailing" constant="24" id="Qpz-rP-63L"/>
-                            <constraint firstItem="N9j-Jr-77x" firstAttribute="centerY" secondItem="sY2-Fg-iVb" secondAttribute="centerY" id="fjf-vU-4jh"/>
-                            <constraint firstItem="N9j-Jr-77x" firstAttribute="leading" secondItem="eeg-MT-46r" secondAttribute="leading" constant="24" id="ndp-Mu-sO6"/>
+                            <constraint firstItem="N9j-Jr-77x" firstAttribute="top" secondItem="eeg-MT-46r" secondAttribute="top" constant="8" id="JRR-bm-Cog"/>
+                            <constraint firstItem="N9j-Jr-77x" firstAttribute="leading" secondItem="eeg-MT-46r" secondAttribute="leading" constant="18" id="uWW-Up-vGW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Nmz-ho-hVf"/>
@@ -386,22 +385,13 @@
             </objects>
             <point key="canvasLocation" x="1580" y="-56"/>
         </scene>
-        <!--Shop View Controller-->
+        <!--Pic View Controller-->
         <scene sceneID="yNP-pi-e56">
             <objects>
-                <viewController id="KNg-L5-H7j" customClass="ShopViewController" customModule="login_flow_sample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KNg-L5-H7j" customClass="PicViewController" customModule="login_flow_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JlF-dM-vPy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shopping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9A-C8-aD9">
-                                <rect key="frame" x="171" y="438" width="73" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="qvM-uq-Q9c"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -431,11 +421,11 @@
             </objects>
             <point key="canvasLocation" x="1634.7826086956522" y="-716.51785714285711"/>
         </scene>
-        <!--Shop-->
+        <!--Photos-->
         <scene sceneID="b9y-dP-fhb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZcL-mD-KUT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Shop" image="shop" id="Piq-Dl-N10"/>
+                    <tabBarItem key="tabBarItem" title="Photos" image="shop" id="Piq-Dl-N10"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pfc-e9-gfN">
