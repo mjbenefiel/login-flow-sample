@@ -14,9 +14,9 @@ struct Slide {
     let description: String
     
     static let collection: [Slide] = [
-        Slide(imageName: "img1a", title: "Welcome to Iterable", description: "Lorem Ipsum Welcome"),
-        Slide(imageName: "img2", title: "Connect Socially", description: "Lorem Ipsum Social"),
-        Slide(imageName: "img3", title: "Safe and Secure", description: "Lorem Ipsum Safe"),
+        Slide(imageName: "img7", title: "Mobile Playground", description: "Lorem Ipsum Welcome"),
+        Slide(imageName: "img5", title: "Collaborate", description: "Lorem Ipsum Collaborate"),
+        Slide(imageName: "img6", title: "Explore", description: "Lorem Ipsum Explore"),
         
     ]
     
