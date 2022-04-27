@@ -12,6 +12,7 @@ class SettingsCell: UITableViewCell {
     
     // MARK: - Properties
     
+    
     // MARK: - Init
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

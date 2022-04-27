@@ -85,33 +85,33 @@ class SettingsViewController1: UIViewController{
         
     }
     
-    
-    
-    
 }
 
 extension SettingsViewController1: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return SettingsSection.allCases.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       
+        guard let section = SettingsSection(rawValue: section) else {return 0}
         switch section {
-        case 0: return 2
-        case 1: return 3
-        default: return 0
+        case .Social: return SocialOptions.allCases.count
+        case .Communications: return CommunicationOptions.allCases.count
+            
         }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
         view.backgroundColor = UIColor(red: 55/255, green: 120/255, blue: 250/255, alpha: 1)
+        print ("Section \(section)")
        let title = UILabel()
         title.font = UIFont.boldSystemFont(ofSize: 16)
         title.textColor = .white
         view.addSubview(title)
-        title.text = "Test"
+        title.text = SettingsSection(rawValue: section)?.description
         title.translatesAutoresizingMaskIntoConstraints = false
         title.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         title.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16).isActive = true
@@ -124,11 +124,18 @@ extension SettingsViewController1: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! SettingsCell
-        switch indexPath.section {
-        case 0: cell.backgroundColor = .red
-        case 1: cell.backgroundColor = .blue
-        default: break
+        
+        guard let section = SettingsSection(rawValue: indexPath.section) else {return UITableViewCell()}
+        switch section {
+        case .Social:
+            let social = SocialOptions(rawValue: indexPath.row)
+            cell.textLabel?.text = social?.description
+        case .Communications:
+            let communications = CommunicationOptions(rawValue: indexPath.row)
+            cell.textLabel?.text = communications?.description
+            
         }
+        
         
         return cell
     }
