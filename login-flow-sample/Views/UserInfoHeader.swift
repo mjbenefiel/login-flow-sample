@@ -29,6 +29,7 @@ class UserInfoHeader: UIView {
         return label
     }()
     
+    
     let emailLabel: UILabel = {
         let label = UILabel()
         label.text = "tony.stark@gmail.com"

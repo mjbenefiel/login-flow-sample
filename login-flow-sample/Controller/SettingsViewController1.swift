@@ -105,7 +105,7 @@ extension SettingsViewController1: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
-        view.backgroundColor = UIColor(red: 55/255, green: 120/255, blue: 250/255, alpha: 1)
+        view.backgroundColor = UIColor(red: 100/255, green: 120/255, blue: 250/255, alpha: 1)
         print ("Section \(section)")
        let title = UILabel()
         title.font = UIFont.boldSystemFont(ofSize: 16)
@@ -124,15 +124,15 @@ extension SettingsViewController1: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! SettingsCell
-        
+        cell.contentView.isUserInteractionEnabled = false
         guard let section = SettingsSection(rawValue: indexPath.section) else {return UITableViewCell()}
         switch section {
         case .Social:
             let social = SocialOptions(rawValue: indexPath.row)
-            cell.textLabel?.text = social?.description
+            cell.sectionType = social
         case .Communications:
             let communications = CommunicationOptions(rawValue: indexPath.row)
-            cell.textLabel?.text = communications?.description
+            cell.sectionType = communications
             
         }
         
@@ -140,5 +140,15 @@ extension SettingsViewController1: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        guard let section = SettingsSection(rawValue: indexPath.section) else {return}
+//        switch section {
+//        case .Social:
+//            print(SocialOptions(rawValue: indexPath.row)?.description)
+//
+//        case .Communications:
+//            print(CommunicationOptions(rawValue: indexPath.row)?.description)
+//
+//        }
+//    }
 }

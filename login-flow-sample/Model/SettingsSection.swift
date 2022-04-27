@@ -5,6 +5,10 @@
 //  Created by Michael Benefiel on 4/27/22.
 //
 
+protocol SectionType: CustomStringConvertible {
+    var containsSwitch: Bool { get }
+}
+
 enum SettingsSection: Int, CaseIterable, CustomStringConvertible {
     case Social
     case Communications
@@ -18,9 +22,13 @@ enum SettingsSection: Int, CaseIterable, CustomStringConvertible {
     }
 }
 
-enum SocialOptions: Int, CaseIterable, CustomStringConvertible {
+enum SocialOptions: Int, CaseIterable, SectionType {
  case editProfile
  case logout
+    
+    var containsSwitch: Bool {
+        return false
+    }
     
     var description: String {
         switch self {
@@ -31,10 +39,18 @@ enum SocialOptions: Int, CaseIterable, CustomStringConvertible {
     }
 }
 
-enum CommunicationOptions: Int, CaseIterable, CustomStringConvertible {
+enum CommunicationOptions: Int, CaseIterable, SectionType {
     case notifications
     case email
     case reportCrashes
+    
+    var containsSwitch: Bool {
+        switch self {
+        case .notifications: return true
+        case .email: return true
+        case .reportCrashes: return false
+        }
+    }
     
     var description: String {
         switch self {
