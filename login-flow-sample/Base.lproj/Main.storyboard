@@ -90,7 +90,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Nmz-ho-hVf"/>
                     <connections>
-                        <outlet property="emailLabel" destination="N9j-Jr-77x" id="0Ko-M5-xkh"/>
+                        <outlet property="emailLabel" destination="N9j-Jr-77x" id="3eG-6o-R8Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6p-yf-5u1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

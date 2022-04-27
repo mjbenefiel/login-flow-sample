@@ -10,6 +10,7 @@ import FirebaseAuth
 
 class HomeViewController: UIViewController {
     
+    
     @IBOutlet weak var emailLabel: UILabel!
     
     override func viewDidLoad() {
