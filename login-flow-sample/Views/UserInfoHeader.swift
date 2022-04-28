@@ -24,7 +24,11 @@ class UserInfoHeader: UIView {
     
     let usernameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Tony Stark"
+        
+    if let value = UDM.shared.defaults.value(forKey: "username") as? String {
+            label.text = value
+        }
+        //label.text = "Tony Stark"
         label.font = UIFont.systemFont(ofSize: 16)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label

@@ -91,7 +91,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Nmz-ho-hVf"/>
                     <connections>
-                        <outlet property="emailLabel" destination="N9j-Jr-77x" id="3eG-6o-R8Y"/>
+                        <outlet property="userNameLabel" destination="N9j-Jr-77x" id="xeR-ZS-C8v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6p-yf-5u1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -325,6 +325,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="signUpButtonTap:" destination="Y1e-ap-GGE" eventType="touchUpInside" id="8KQ-Xh-AC4"/>
+                                            <action selector="textFieldShouldReturnWithSender:" destination="Y1e-ap-GGE" eventType="touchUpInside" id="kfW-PK-MI4"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I95-vy-JZs">

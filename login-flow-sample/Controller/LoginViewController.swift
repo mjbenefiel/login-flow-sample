@@ -10,7 +10,7 @@ import UIKit
 import MBProgressHUD
 import Loaf
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     weak var delegate: OnboardingDelegate?
     private let authManager = AuthManager()
@@ -26,6 +26,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    //@IBOutlet var label: UILabel!
+   // let userDefaults = UserDefaults(suiteName: "saved_data")
     
     private enum PageType{
         case login
@@ -47,8 +49,28 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad(){
         super.viewDidLoad()
+        userNameTextField.delegate = self
         setupViewsFor(pageType: .login)
+//        if let value = UDM.shared.defaults.value(forKey: "username") as? String {
+//           label.text = value
+//       }
     }
+    
+    
+
+    @IBAction func textFieldShouldReturn(sender: UIButton) {
+        //Save username
+        UDM.shared.defaults.setValue(userNameTextField.text, forKey: "username")
+        //print("username: \(userNameTextField.text)")
+        return
+    }
+    
+
+
+    
+    
+    
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         //setupViewsFor(pageType: .login)
@@ -164,4 +186,10 @@ class LoginViewController: UIViewController {
         //print(sender.selectedSegmentIndex)
         currentPageType = sender.selectedSegmentIndex == 0 ? .login : .signUp
     }
+}
+
+class UDM {
+    static let shared = UDM()
+    let defaults = UserDefaults(suiteName: "saved_data")!
+    
 }
