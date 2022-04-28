@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class UserInfoHeader: UIView {
     
@@ -29,10 +30,9 @@ class UserInfoHeader: UIView {
         return label
     }()
     
-    
     let emailLabel: UILabel = {
         let label = UILabel()
-        label.text = "tony.stark@gmail.com"
+        label.text = Auth.auth().currentUser?.email
         label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = .lightGray
         label.translatesAutoresizingMaskIntoConstraints = false

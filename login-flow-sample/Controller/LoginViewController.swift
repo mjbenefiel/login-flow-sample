@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordConfirmationTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     private enum PageType{
@@ -52,11 +53,13 @@ class LoginViewController: UIViewController {
         super.viewDidAppear(animated)
         //setupViewsFor(pageType: .login)
         emailTextField.becomeFirstResponder()
+        
     }
     
     private func setupViewsFor(pageType: PageType){
         errorMessage = nil
         passwordConfirmationTextField.isHidden = pageType == .login
+        userNameTextField.isHidden = pageType == .login
         signUpButton.isHidden = pageType == .login
         forgetPasswordButton.isHidden = pageType == .signUp
         loginButton.isHidden = pageType == .signUp
@@ -103,11 +106,13 @@ class LoginViewController: UIViewController {
     
     @IBAction func signUpButtonTap(_ sender: Any) {
         guard let email = emailTextField.text, !email.isEmpty,
+              let userName = userNameTextField.text, !userName.isEmpty,
               let password = passwordTextField.text, !password.isEmpty,
               let passwordConfirmation = passwordConfirmationTextField.text, !passwordConfirmation.isEmpty else{
             showErrorMessageIfNeeded(text: "Invalid form")
             return
         }
+        
         
         guard password == passwordConfirmation else{
             showErrorMessageIfNeeded(text: "Passwords are incorrect")
@@ -128,6 +133,7 @@ class LoginViewController: UIViewController {
         }
         
     }
+    
     
     
     @IBAction func loginButtonTap(_ sender: Any) {

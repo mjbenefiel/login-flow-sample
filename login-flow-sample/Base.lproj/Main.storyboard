@@ -53,6 +53,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="O0w-nc-FRI">
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="fK2-xi-OcV">
+                            <color key="tintColor" red="0.0" green="0.11372549019607843" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="logoutButtonTapped:" destination="clf-Mi-CfJ" id="VLO-cU-pwE"/>
                             </connections>
@@ -263,7 +264,7 @@
                                 </connections>
                             </segmentedControl>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="PFF-Zy-ERv">
-                                <rect key="frame" x="48" y="143" width="318" height="424"/>
+                                <rect key="frame" x="48" y="143" width="318" height="496"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iml-70-f9e">
                                         <rect key="frame" x="0.0" y="0.0" width="318" height="56"/>
@@ -273,8 +274,16 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s1H-OF-bsW">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wjg-sk-2Kk">
                                         <rect key="frame" x="0.0" y="72" width="318" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="iUX-z9-01H"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s1H-OF-bsW">
+                                        <rect key="frame" x="0.0" y="144" width="318" height="56"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="31x-Eu-PqB"/>
                                         </constraints>
@@ -282,7 +291,7 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password Confirmation" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V7O-ha-qQP">
-                                        <rect key="frame" x="0.0" y="144" width="318" height="56"/>
+                                        <rect key="frame" x="0.0" y="216" width="318" height="56"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="L12-9j-hST"/>
                                         </constraints>
@@ -290,13 +299,13 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your credentials are incorrect" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2u-S8-IpQ">
-                                        <rect key="frame" x="0.0" y="216" width="318" height="17"/>
+                                        <rect key="frame" x="0.0" y="288" width="318" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4G9-iv-asa">
-                                        <rect key="frame" x="0.0" y="249" width="318" height="31"/>
+                                        <rect key="frame" x="0.0" y="321" width="318" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Forget password?"/>
                                         <connections>
@@ -304,7 +313,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDQ-aH-MXl">
-                                        <rect key="frame" x="0.0" y="296" width="318" height="56"/>
+                                        <rect key="frame" x="0.0" y="368" width="318" height="56"/>
                                         <color key="backgroundColor" red="0.94509803921568625" green="0.4823529411764706" blue="0.054901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="7Os-7u-lNP"/>
@@ -319,7 +328,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I95-vy-JZs">
-                                        <rect key="frame" x="0.0" y="368" width="318" height="56"/>
+                                        <rect key="frame" x="0.0" y="440" width="318" height="56"/>
                                         <color key="backgroundColor" red="0.40000000000000002" green="0.45882352941176469" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="yba-Sx-tXg"/>
@@ -357,6 +366,7 @@
                         <outlet property="passwordTextField" destination="s1H-OF-bsW" id="QI8-0J-NnO"/>
                         <outlet property="segmentedControl" destination="bS4-BL-JAZ" id="yLP-6F-KN2"/>
                         <outlet property="signUpButton" destination="XDQ-aH-MXl" id="lrR-vs-tSw"/>
+                        <outlet property="userNameTextField" destination="wjg-sk-2Kk" id="KeQ-Ti-SqH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1f-Rm-2kr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -369,7 +379,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="z3p-2H-Icg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="TE4-SU-EcQ"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dby-bv-Omy">
+                    <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" id="Dby-bv-Omy">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

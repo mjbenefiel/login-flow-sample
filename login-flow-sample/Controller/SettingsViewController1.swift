@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import MBProgressHUD
 import Loaf
+import FirebaseAuth
 
 
 private let reuseIdentifier = "SettingsCell"
@@ -51,11 +52,11 @@ class SettingsViewController1: UIViewController{
     func configureUI() {
         configureTableView()
         
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.barStyle = .black
-        navigationController?.navigationBar.barTintColor = UIColor(red: 55/255, green: 120/255, blue: 250/255, alpha: 1)
-        navigationItem.title = "Settings"
+//        navigationController?.navigationBar.prefersLargeTitles = true
+//        navigationController?.navigationBar.isTranslucent = false
+//        navigationController?.navigationBar.barStyle = .black
+//        navigationController?.navigationBar.barTintColor = UIColor(red: 55/255, green: 120/255, blue: 250/255, alpha: 1)
+//        navigationItem.title = "Settings"
     }
     
     
@@ -105,7 +106,7 @@ extension SettingsViewController1: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
-        view.backgroundColor = UIColor(red: 100/255, green: 120/255, blue: 250/255, alpha: 1)
+        view.backgroundColor = UIColor(red: 102/255, green: 117/255, blue: 143/255, alpha: 1)
         print ("Section \(section)")
        let title = UILabel()
         title.font = UIFont.boldSystemFont(ofSize: 16)

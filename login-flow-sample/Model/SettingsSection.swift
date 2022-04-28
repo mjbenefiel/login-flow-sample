@@ -4,6 +4,10 @@
 //
 //  Created by Michael Benefiel on 4/27/22.
 //
+//import UIKit
+//import Loaf
+//import FirebaseAuth
+
 
 protocol SectionType: CustomStringConvertible {
     var containsSwitch: Bool { get }
@@ -21,7 +25,12 @@ enum SettingsSection: Int, CaseIterable, CustomStringConvertible {
         }
     }
 }
-
+    
+    private let authManager = AuthManager()
+    
+    enum AuthError:Error {
+        case unknownError
+    }
 enum SocialOptions: Int, CaseIterable, SectionType {
  case editProfile
  case logout
@@ -33,11 +42,12 @@ enum SocialOptions: Int, CaseIterable, SectionType {
     var description: String {
         switch self {
         case .editProfile: return "Edit Profile"
-        case .logout: return "Log Out"
-            
+        case .logout: return "Password & Security"
         }
+        
     }
 }
+
 
 enum CommunicationOptions: Int, CaseIterable, SectionType {
     case notifications
@@ -61,4 +71,5 @@ enum CommunicationOptions: Int, CaseIterable, SectionType {
     }
     
 }
+
 
