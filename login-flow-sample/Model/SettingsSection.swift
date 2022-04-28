@@ -25,15 +25,15 @@ enum SettingsSection: Int, CaseIterable, CustomStringConvertible {
         }
     }
 }
-    
-    private let authManager = AuthManager()
-    
-    enum AuthError:Error {
-        case unknownError
-    }
+
+private let authManager = AuthManager()
+
+enum AuthError:Error {
+    case unknownError
+}
 enum SocialOptions: Int, CaseIterable, SectionType {
- case editProfile
- case logout
+    case editProfile
+    case logout
     
     var containsSwitch: Bool {
         return false
@@ -47,7 +47,6 @@ enum SocialOptions: Int, CaseIterable, SectionType {
         
     }
 }
-
 
 enum CommunicationOptions: Int, CaseIterable, SectionType {
     case notifications

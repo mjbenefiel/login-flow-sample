@@ -64,7 +64,6 @@ class PicViewController: UIViewController, UICollectionViewDataSource, UISearchB
         }
     }
     
-    
     private func setupShopBar(){
         self.title = "Photos"
     }

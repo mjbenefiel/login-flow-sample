@@ -52,16 +52,12 @@ class SettingsViewController1: UIViewController{
     func configureUI() {
         configureTableView()
         
-//        navigationController?.navigationBar.prefersLargeTitles = true
-//        navigationController?.navigationBar.isTranslucent = false
-//        navigationController?.navigationBar.barStyle = .black
-//        navigationController?.navigationBar.barTintColor = UIColor(red: 55/255, green: 120/255, blue: 250/255, alpha: 1)
-//        navigationItem.title = "Settings"
+        //        navigationController?.navigationBar.prefersLargeTitles = true
+        //        navigationController?.navigationBar.isTranslucent = false
+        //        navigationController?.navigationBar.barStyle = .black
+        //        navigationController?.navigationBar.barTintColor = UIColor(red: 55/255, green: 120/255, blue: 250/255, alpha: 1)
+        //        navigationItem.title = "Settings"
     }
-    
-    
-    
-    
     
     private func setupNavigationBar(){
         self.title = K.NavigationTitle.settings
@@ -95,7 +91,7 @@ extension SettingsViewController1: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       
+        
         guard let section = SettingsSection(rawValue: section) else {return 0}
         switch section {
         case .Social: return SocialOptions.allCases.count
@@ -108,7 +104,7 @@ extension SettingsViewController1: UITableViewDelegate, UITableViewDataSource {
         let view = UIView()
         view.backgroundColor = UIColor(red: 102/255, green: 117/255, blue: 143/255, alpha: 1)
         print ("Section \(section)")
-       let title = UILabel()
+        let title = UILabel()
         title.font = UIFont.boldSystemFont(ofSize: 16)
         title.textColor = .white
         view.addSubview(title)
@@ -137,19 +133,18 @@ extension SettingsViewController1: UITableViewDelegate, UITableViewDataSource {
             
         }
         
-        
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        guard let section = SettingsSection(rawValue: indexPath.section) else {return}
-//        switch section {
-//        case .Social:
-//            print(SocialOptions(rawValue: indexPath.row)?.description)
-//
-//        case .Communications:
-//            print(CommunicationOptions(rawValue: indexPath.row)?.description)
-//
-//        }
-//    }
+    //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    //        guard let section = SettingsSection(rawValue: indexPath.section) else {return}
+    //        switch section {
+    //        case .Social:
+    //            print(SocialOptions(rawValue: indexPath.row)?.description)
+    //
+    //        case .Communications:
+    //            print(CommunicationOptions(rawValue: indexPath.row)?.description)
+    //
+    //        }
+    //    }
 }

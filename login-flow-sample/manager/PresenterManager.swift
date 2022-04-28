@@ -27,12 +27,11 @@ class PresenterManager {
             viewController = UIStoryboard(name: K.storyboardID.main, bundle: nil).instantiateViewController(withIdentifier: K.storyboardID.onboardingViewController)
         }
         
-                if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
-                   let window = sceneDelegate.window {
-                    window.rootViewController = viewController
-        
-                    UIView.transition(with: window, duration: 0.25, options: .transitionCrossDissolve, animations: nil, completion: nil)
-                }
-        
+        if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
+           let window = sceneDelegate.window {
+            window.rootViewController = viewController
+            
+            UIView.transition(with: window, duration: 0.25, options: .transitionCrossDissolve, animations: nil, completion: nil)
+        }
     }
 }

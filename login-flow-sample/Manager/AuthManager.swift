@@ -10,7 +10,7 @@ import FirebaseAuth
 
 struct AuthManager{
     
-   private let auth = Auth.auth()
+    private let auth = Auth.auth()
     
     enum AuthError:Error {
         case unknownError

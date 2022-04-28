@@ -10,7 +10,7 @@ import UIKit
 
 class LoadingViewController: UIViewController {
     
-private let authManager = AuthManager()
+    private let authManager = AuthManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()

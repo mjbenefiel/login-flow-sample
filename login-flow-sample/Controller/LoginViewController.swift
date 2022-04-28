@@ -27,7 +27,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     //@IBOutlet var label: UILabel!
-   // let userDefaults = UserDefaults(suiteName: "saved_data")
+    // let userDefaults = UserDefaults(suiteName: "saved_data")
     
     private enum PageType{
         case login
@@ -51,25 +51,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         userNameTextField.delegate = self
         setupViewsFor(pageType: .login)
-//        if let value = UDM.shared.defaults.value(forKey: "username") as? String {
-//           label.text = value
-//       }
+        //        if let value = UDM.shared.defaults.value(forKey: "username") as? String {
+        //           label.text = value
+        //       }
     }
     
     
-
+    
     @IBAction func textFieldShouldReturn(sender: UIButton) {
         //Save username
         UDM.shared.defaults.setValue(userNameTextField.text, forKey: "username")
         //print("username: \(userNameTextField.text)")
         return
     }
-    
-
-
-    
-    
-    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -100,7 +94,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             if let textField = alertController.textFields?.first,
-                let email = textField.text, !email.isEmpty {
+               let email = textField.text, !email.isEmpty {
                 self.authManager.resetPassword(withEmail: email) { (result) in
                     switch result {
                     case .success:
@@ -156,11 +150,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    
-    
     @IBAction func loginButtonTap(_ sender: Any) {
         view.endEditing(true)
-       
+        
         guard let email = emailTextField.text, !email.isEmpty,
               let password = passwordTextField.text, !password.isEmpty else {
             showErrorMessageIfNeeded(text: "Invalid form")
