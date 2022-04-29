@@ -20,7 +20,7 @@ https://www.youtube.com/playlist?list=PL5PR3UyfTWvdlk-Qi-dPtJmjTj-2YIMMf
 
 <b>Onboarding Screen -- Three slides</b>
 
-<img width="381" alt="onboarding" src="https://user-images.githubusercontent.com/38706611/165994599-916e8bfb-dd78-42d5-a266-5edd16aa983a.png">
+<img width="240" heigh="135" alt="onboarding" src="https://user-images.githubusercontent.com/38706611/165994599-916e8bfb-dd78-42d5-a266-5edd16aa983a.png">
 
 <b>Login</b>
 
