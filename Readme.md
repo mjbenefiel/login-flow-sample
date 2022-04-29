@@ -24,31 +24,31 @@ https://www.youtube.com/playlist?list=PL5PR3UyfTWvdlk-Qi-dPtJmjTj-2YIMMf
 
 <b>Login</b>
 
-<img width="389" alt="login" src="https://user-images.githubusercontent.com/38706611/165994711-e55ca18a-6452-4d82-aac8-be6baeb0b89a.png">
+<img width="240" heigh="135" alt="login" src="https://user-images.githubusercontent.com/38706611/165994711-e55ca18a-6452-4d82-aac8-be6baeb0b89a.png">
 
 <b>Signup</b>
 
-<img width="384" alt="signup" src="https://user-images.githubusercontent.com/38706611/165994741-84906979-8d1c-47a1-915e-c519bf81fddb.png">
+<img width="240" heigh="135" alt="signup" src="https://user-images.githubusercontent.com/38706611/165994741-84906979-8d1c-47a1-915e-c519bf81fddb.png">
 
 <b>Forgot Password</b>
 
-<img width="383" alt="forgetpwd" src="https://user-images.githubusercontent.com/38706611/165994761-80af2a1b-6f5a-436b-861a-6139dead0d42.png">
+<img width="240" heigh="135" alt="forgetpwd" src="https://user-images.githubusercontent.com/38706611/165994761-80af2a1b-6f5a-436b-861a-6139dead0d42.png">
 
 <b>Error Handling</b>
 
-<img width="376" alt="errorhandle" src="https://user-images.githubusercontent.com/38706611/165994789-2ee60efe-0463-41f9-a46f-c9e62ef315ad.png">
+<img width="240" heigh="135" alt="errorhandle" src="https://user-images.githubusercontent.com/38706611/165994789-2ee60efe-0463-41f9-a46f-c9e62ef315ad.png">
 
 <b>Home</b>
 
-<img width="375" alt="home" src="https://user-images.githubusercontent.com/38706611/165994808-d85beeb5-169b-46d9-8198-7a2f1cf43db1.png">
+<img width="240" heigh="135" alt="home" src="https://user-images.githubusercontent.com/38706611/165994808-d85beeb5-169b-46d9-8198-7a2f1cf43db1.png">
 
 <b>Photo Search - Unsplash API</b>
 
-<img width="380" alt="unsplash" src="https://user-images.githubusercontent.com/38706611/165994835-abaccdcf-dcc2-4e2b-8ec5-787ce49aa88e.png">
+<img width="240" heigh="135" alt="unsplash" src="https://user-images.githubusercontent.com/38706611/165994835-abaccdcf-dcc2-4e2b-8ec5-787ce49aa88e.png">
 
 <b>Settings -- Logout functional -- Redirects to Onboarding Screen</b>
 
-<img width="396" alt="settings" src="https://user-images.githubusercontent.com/38706611/165994895-4a0e7b81-eb01-49c9-818c-46a6c4eadc88.png">
+<img width="240" heigh="135" alt="settings" src="https://user-images.githubusercontent.com/38706611/165994895-4a0e7b81-eb01-49c9-818c-46a6c4eadc88.png">
 
 
 
