@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		057532ECB576CAAA6852D8CF /* Pods_login_flow_sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EDFF3F9511307C75B567EBA /* Pods_login_flow_sample.framework */; };
 		3901E099281209980013C628 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3901E098281209980013C628 /* Constants.swift */; };
-		3901E09E281210EE0013C628 /* PresenterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3901E09D281210EE0013C628 /* PresenterManager.swift */; };
+		3901E09E281210EE0013C628 /* PresenterManager1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3901E09D281210EE0013C628 /* PresenterManager1.swift */; };
 		3909B6F62817069E00C2A49C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3909B6F52817069E00C2A49C /* LoginViewController.swift */; };
 		3926B17428176B24006DE2F4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3926B17328176B24006DE2F4 /* Podfile */; };
 		3943D7062811F3CD0077E231 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3943D7052811F3CD0077E231 /* Helper.swift */; };
@@ -59,7 +59,7 @@
 /* Begin PBXFileReference section */
 		374CFB28CB130F6FBFB2E7E8 /* Pods-login-flow-sampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-login-flow-sampleTests.debug.xcconfig"; path = "Target Support Files/Pods-login-flow-sampleTests/Pods-login-flow-sampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3901E098281209980013C628 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		3901E09D281210EE0013C628 /* PresenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterManager.swift; sourceTree = "<group>"; };
+		3901E09D281210EE0013C628 /* PresenterManager1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterManager1.swift; sourceTree = "<group>"; };
 		3909B6F52817069E00C2A49C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3926B17328176B24006DE2F4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3943D7052811F3CD0077E231 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 		3901E09C281210D10013C628 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				3901E09D281210EE0013C628 /* PresenterManager.swift */,
+				3901E09D281210EE0013C628 /* PresenterManager1.swift */,
 				394D96B62818AAAE00DD4446 /* AuthManager.swift */,
 			);
 			path = Manager;
@@ -515,7 +515,7 @@
 				39846641281330CD00385888 /* OnboardingViewController.swift in Sources */,
 				396ADFE42811BBC700F5A7F0 /* LoadingViewController1.swift in Sources */,
 				3943D7062811F3CD0077E231 /* Helper.swift in Sources */,
-				3901E09E281210EE0013C628 /* PresenterManager.swift in Sources */,
+				3901E09E281210EE0013C628 /* PresenterManager1.swift in Sources */,
 				39D579CA28149D7F009A1D32 /* OnboardingCollectionViewCell.swift in Sources */,
 				39D579CD28149E3C009A1D32 /* Slide.swift in Sources */,
 				3909B6F62817069E00C2A49C /* LoginViewController.swift in Sources */,
@@ -700,6 +700,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "login-flow-sample/Info.plist";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to upload photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -728,6 +729,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "login-flow-sample/Info.plist";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to upload photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

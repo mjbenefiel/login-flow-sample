@@ -72,21 +72,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9j-Jr-77x">
-                                <rect key="frame" x="18" y="96" width="80" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9j-Jr-77x">
+                                <rect key="frame" x="24" y="429.5" width="366" height="37"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="32"/>
+                                <color key="textColor" red="0.27843137254901962" green="0.27843137254901962" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.0" green="0.1137254902" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0l-fH-2uZ">
+                                <rect key="frame" x="24" y="308" width="366" height="72"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="hez-XP-5tv"/>
+                                    <constraint firstAttribute="height" constant="72" id="ca1-3M-uWF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="47"/>
+                                <color key="textColor" red="0.27843137254901962" green="0.27843137254901962" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.0" green="0.1137254902" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eeg-MT-46r"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="N9j-Jr-77x" firstAttribute="top" secondItem="eeg-MT-46r" secondAttribute="top" constant="8" id="JRR-bm-Cog"/>
-                            <constraint firstItem="N9j-Jr-77x" firstAttribute="leading" secondItem="eeg-MT-46r" secondAttribute="leading" constant="18" id="uWW-Up-vGW"/>
+                            <constraint firstItem="W0l-fH-2uZ" firstAttribute="leading" secondItem="eeg-MT-46r" secondAttribute="leading" constant="24" id="9UV-nw-87l"/>
+                            <constraint firstItem="N9j-Jr-77x" firstAttribute="centerY" secondItem="sY2-Fg-iVb" secondAttribute="centerY" id="OfH-BN-Lvy"/>
+                            <constraint firstItem="W0l-fH-2uZ" firstAttribute="top" secondItem="eeg-MT-46r" secondAttribute="top" constant="220" id="ala-d6-x1A"/>
+                            <constraint firstItem="eeg-MT-46r" firstAttribute="trailing" secondItem="N9j-Jr-77x" secondAttribute="trailing" constant="24" id="beW-Dc-RLm"/>
+                            <constraint firstItem="W0l-fH-2uZ" firstAttribute="leading" secondItem="eeg-MT-46r" secondAttribute="leading" constant="24" id="gnF-J8-cJV"/>
+                            <constraint firstItem="eeg-MT-46r" firstAttribute="trailing" secondItem="W0l-fH-2uZ" secondAttribute="trailing" constant="24" id="hpb-qH-5W9"/>
+                            <constraint firstItem="N9j-Jr-77x" firstAttribute="leading" secondItem="eeg-MT-46r" secondAttribute="leading" constant="24" id="i0h-mf-Ud4"/>
+                            <constraint firstItem="N9j-Jr-77x" firstAttribute="centerX" secondItem="sY2-Fg-iVb" secondAttribute="centerX" id="qQv-VX-Le6"/>
+                            <constraint firstItem="eeg-MT-46r" firstAttribute="trailing" secondItem="W0l-fH-2uZ" secondAttribute="trailing" constant="24" id="rQJ-SK-aXj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Nmz-ho-hVf"/>
@@ -226,7 +239,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.59999999999999998" green="0.63921568627450975" blue="0.70980392156862748" alpha="0.32000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
-                        <tabBarAppearance key="standardAppearance"/>
+                        <tabBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tabBarAppearance>
                     </tabBar>
                     <connections>
                         <segue destination="VfA-N1-DPK" kind="relationship" relationship="viewControllers" id="620-a7-4rI"/>
@@ -274,7 +289,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wjg-sk-2Kk">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wjg-sk-2Kk">
                                         <rect key="frame" x="0.0" y="72" width="318" height="56"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="iUX-z9-01H"/>

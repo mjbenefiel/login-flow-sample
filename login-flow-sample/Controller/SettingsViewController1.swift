@@ -12,9 +12,11 @@ import Loaf
 import FirebaseAuth
 
 
+
+
 private let reuseIdentifier = "SettingsCell"
 
-class SettingsViewController1: UIViewController{
+class SettingsViewController1: UIViewController {
     
     private let authManager = AuthManager()
     
@@ -28,8 +30,9 @@ class SettingsViewController1: UIViewController{
         super.viewDidLoad()
         setupNavigationBar()
         configureUI()
-        
-    }
+            
+        }
+    
     
     // MARK: - Helper Functions
     
@@ -72,7 +75,7 @@ class SettingsViewController1: UIViewController{
             let result = self.authManager.logoutUser()
             switch result {
             case .success:
-                PresenterManager.shared.show(vc: .onboarding )
+                PresenterManager1.shared.show(vc: .onboarding )
             case .failure(let error):
                 Loaf(error.localizedDescription, state: .error, location: .top, sender: self).show()
             }

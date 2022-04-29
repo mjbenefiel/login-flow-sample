@@ -106,7 +106,7 @@ extension OnboardingViewController: OnboardingDelegate {
         //show maintab bar
         if let loginViewController = self.presentedViewController as? LoginViewController {
             loginViewController.dismiss(animated: true) {
-                PresenterManager.shared.show(vc: .mainTabBarController)
+                PresenterManager1.shared.show(vc: .mainTabBarController)
             }
         }
         

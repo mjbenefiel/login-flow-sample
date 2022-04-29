@@ -4,7 +4,6 @@
 //
 //  Created by Michael Benefiel on 4/21/22.
 //
-
 import UIKit
 import Firebase
 import CoreData
@@ -96,4 +95,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
 }
-

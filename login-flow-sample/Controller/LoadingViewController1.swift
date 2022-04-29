@@ -30,7 +30,7 @@ class LoadingViewController: UIViewController {
         // if user is not logged in, show onboarding controller
         if authManager.isUserLoggedIn() {
             
-            PresenterManager.shared.show(vc: .mainTabBarController)
+            PresenterManager1.shared.show(vc: .mainTabBarController)
             
         } else{
             performSegue(withIdentifier: K.Segue.showOnboardingScreen, sender: nil)
