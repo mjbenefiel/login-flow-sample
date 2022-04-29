@@ -11,6 +11,7 @@
 		3901E099281209980013C628 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3901E098281209980013C628 /* Constants.swift */; };
 		3901E09E281210EE0013C628 /* PresenterManager1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3901E09D281210EE0013C628 /* PresenterManager1.swift */; };
 		3909B6F62817069E00C2A49C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3909B6F52817069E00C2A49C /* LoginViewController.swift */; };
+		391DD973281BADDD0005DD1B /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 391DD972281BADDD0005DD1B /* Readme.md */; };
 		3926B17428176B24006DE2F4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3926B17328176B24006DE2F4 /* Podfile */; };
 		3943D7062811F3CD0077E231 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3943D7052811F3CD0077E231 /* Helper.swift */; };
 		394B37A128176F9D00395FEB /* SettingsViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394B37A028176F9D00395FEB /* SettingsViewController1.swift */; };
@@ -61,6 +62,7 @@
 		3901E098281209980013C628 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3901E09D281210EE0013C628 /* PresenterManager1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterManager1.swift; sourceTree = "<group>"; };
 		3909B6F52817069E00C2A49C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		391DD972281BADDD0005DD1B /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		3926B17328176B24006DE2F4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3943D7052811F3CD0077E231 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		394B37A028176F9D00395FEB /* SettingsViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController1.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 		396ADFA62811B85F00F5A7F0 = {
 			isa = PBXGroup;
 			children = (
+				391DD972281BADDD0005DD1B /* Readme.md */,
 				3926B17328176B24006DE2F4 /* Podfile */,
 				396ADFB12811B85F00F5A7F0 /* login-flow-sample */,
 				396ADFC82811B86100F5A7F0 /* login-flow-sampleTests */,
@@ -370,6 +373,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				391DD973281BADDD0005DD1B /* Readme.md in Resources */,
 				3926B17428176B24006DE2F4 /* Podfile in Resources */,
 				39C2775D28185C9900ECF9D8 /* GoogleService-Info.plist in Resources */,
 				396ADFBF2811B86100F5A7F0 /* LaunchScreen.storyboard in Resources */,
