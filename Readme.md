@@ -15,4 +15,5 @@ Overall, this was a good exercise/practice and learning experience with Swift. I
 Moving forward, I'd be interested in building a Firebase Chat App as seen in the link below. This has a lot of the features implemented that I found myself wanting to do as I tinkered more with this app.
 
 Firebase Chat App
+
 https://www.youtube.com/playlist?list=PL5PR3UyfTWvdlk-Qi-dPtJmjTj-2YIMMf
