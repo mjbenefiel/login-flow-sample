@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import MBProgressHUD
 import Loaf
+import IterableSDK
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
@@ -173,6 +174,29 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         
     }
+    
+    @IBAction func updatedUserProfile(_ sender: UIButton) {
+        let dataField: [String: Any] = [
+            "firstName": "Michael",
+            "isRegisteredUser": true,
+            "SA_User_Test_Key": "completed"
+        ]
+        
+        IterableAPI.updateUser(dataField,
+                               mergeNestedObjects: false,
+                               onSuccess: myUserUpdateSuccessHandler,
+                               onFailure: myUserUpdateFailureHandler)
+    }
+
+    func myUserUpdateSuccessHandler(data: [AnyHashable: Any]?) -> () {
+        print("Successfully sent user update request to Iterable")
+    }
+
+    func myUserUpdateFailureHandler(reason: String?, data: Data?) -> () {
+        print("Failure sending user update request to Iterable")
+    }
+
+
     
     @IBAction func segmentedControlChanged(_ sender: UISegmentedControl) {
         //print(sender.selectedSegmentIndex)

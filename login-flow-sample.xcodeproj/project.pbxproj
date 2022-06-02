@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		057532ECB576CAAA6852D8CF /* Pods_login_flow_sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EDFF3F9511307C75B567EBA /* Pods_login_flow_sample.framework */; };
 		1A05FD402846D588005D090F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A05FD3F2846D588005D090F /* GoogleService-Info.plist */; };
+		1A0BC7B7284929ED0011BAD8 /* IterableAppExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 1A0BC7B6284929ED0011BAD8 /* IterableAppExtensions */; };
+		1A0BC7B9284929ED0011BAD8 /* IterableSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 1A0BC7B8284929ED0011BAD8 /* IterableSDK */; };
 		1A18EB8F2846D84B00516128 /* PresenterManager1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A18EB8E2846D84B00516128 /* PresenterManager1.swift */; };
 		3901E099281209980013C628 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3901E098281209980013C628 /* Constants.swift */; };
 		3909B6F62817069E00C2A49C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3909B6F52817069E00C2A49C /* LoginViewController.swift */; };
@@ -106,6 +108,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A0BC7B7284929ED0011BAD8 /* IterableAppExtensions in Frameworks */,
+				1A0BC7B9284929ED0011BAD8 /* IterableSDK in Frameworks */,
 				057532ECB576CAAA6852D8CF /* Pods_login_flow_sample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +286,10 @@
 			dependencies = (
 			);
 			name = "login-flow-sample";
+			packageProductDependencies = (
+				1A0BC7B6284929ED0011BAD8 /* IterableAppExtensions */,
+				1A0BC7B8284929ED0011BAD8 /* IterableSDK */,
+			);
 			productName = "login-flow-sample";
 			productReference = 396ADFAF2811B85F00F5A7F0 /* login-flow-sample.app */;
 			productType = "com.apple.product-type.application";
@@ -357,6 +365,9 @@
 				Base,
 			);
 			mainGroup = 396ADFA62811B85F00F5A7F0;
+			packageReferences = (
+				1A0BC7B5284929ED0011BAD8 /* XCRemoteSwiftPackageReference "swift-sdk" */,
+			);
 			productRefGroup = 396ADFB02811B85F00F5A7F0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -877,6 +888,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1A0BC7B5284929ED0011BAD8 /* XCRemoteSwiftPackageReference "swift-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/iterable/swift-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1A0BC7B6284929ED0011BAD8 /* IterableAppExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A0BC7B5284929ED0011BAD8 /* XCRemoteSwiftPackageReference "swift-sdk" */;
+			productName = IterableAppExtensions;
+		};
+		1A0BC7B8284929ED0011BAD8 /* IterableSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A0BC7B5284929ED0011BAD8 /* XCRemoteSwiftPackageReference "swift-sdk" */;
+			productName = IterableSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 396ADFA72811B85F00F5A7F0 /* Project object */;
 }

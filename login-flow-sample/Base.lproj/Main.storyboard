@@ -356,6 +356,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="loginButtonTap:" destination="Y1e-ap-GGE" eventType="touchUpInside" id="YIZ-XH-Lp6"/>
+                                            <action selector="updatedUserProfile:" destination="Y1e-ap-GGE" eventType="touchUpInside" id="LGj-Dd-klM"/>
                                         </connections>
                                     </button>
                                 </subviews>

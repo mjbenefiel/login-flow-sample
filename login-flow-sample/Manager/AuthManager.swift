@@ -8,6 +8,7 @@
 import Foundation
 import FirebaseAuth
 
+
 struct AuthManager{
     
     private let auth = Auth.auth()

@@ -7,7 +7,7 @@
 import UIKit
 import Firebase
 import CoreData
-
+import IterableSDK
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.makeKeyAndVisible()
         window?.rootViewController = UINavigationController(rootViewController: SettingsViewController1())
+        //Iterable
+        let config = IterableConfig()
+        IterableAPI.initialize(apiKey: "024723d47b984f51b2330aada8f09f45", launchOptions: launchOptions, config: config)
+        IterableAPI.email = "michaeljbenefiel+usertest2@gmail.com"
+        config.inAppDisplayInterval = 1000.0
+        
         return true
     }
     
