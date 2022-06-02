@@ -30,6 +30,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     //@IBOutlet var label: UILabel!
     // let userDefaults = UserDefaults(suiteName: "saved_data")
     
+    
     private enum PageType{
         case login
         case signUp
@@ -56,7 +57,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         //           label.text = value
         //       }
     }
-    
     
     
     @IBAction func textFieldShouldReturn(sender: UIButton) {
@@ -176,11 +176,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func updatedUserProfile(_ sender: UIButton) {
-        IterableAPI.email = "michaeljbenefiel+usertest3@gmail.com"
+        IterableAPI.email = emailTextField.text
         let dataField: [String: Any] = [
-            "firstName": "Michael",
+            "firstName": "Michael12",
             "isRegisteredUser": true,
-            "SA_User_Test_Key": "completed"
+            
         ]
         
         IterableAPI.updateUser(dataField,
@@ -196,6 +196,60 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     func myUserUpdateFailureHandler(reason: String?, data: Data?) -> () {
         print("Failure sending user update request to Iterable")
     }
+    
+    @IBAction func itblLoginEvent(_ sender: UIButton) {
+        
+        let formatter = DateFormatter()
+        // initially set the format based on your datepicker date / server String
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+
+        let myString = formatter.string(from: Date()) // string purpose I add here
+        // convert your string to date
+        let yourDate = formatter.date(from: myString)
+        //then again set the date format whhich type of output you need
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        // again convert your date to string
+        let myStringDate = formatter.string(from: yourDate!)
+
+        print(myStringDate)
+
+        IterableAPI.email = emailTextField.text
+        IterableAPI.track(
+            event: "Login",
+            dataFields: [
+                "platform": "iOS",
+                "custom_key": "testing",
+                "last_login": myStringDate
+            ]
+        )
+    }
+    
+    @IBAction func itblSignUpEvent(_ sender: UIButton) {
+        
+        let formatter = DateFormatter()
+        // initially set the format based on your datepicker date / server String
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+
+        let myString = formatter.string(from: Date()) // string purpose I add here
+        // convert your string to date
+        let yourDate = formatter.date(from: myString)
+        //then again set the date format whhich type of output you need
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        // again convert your date to string
+        let myStringDate = formatter.string(from: yourDate!)
+
+        print(myStringDate)
+
+        IterableAPI.email = emailTextField.text
+        IterableAPI.track(
+            event: "SignUp",
+            dataFields: [
+                "platform": "iOS",
+                "custom_key": "testing",
+                "sign_up_date": myStringDate
+            ]
+        )
+    }
 
 
     
@@ -210,3 +264,4 @@ class UDM {
     let defaults = UserDefaults(suiteName: "saved_data")!
     
 }
+

@@ -37,11 +37,11 @@ class HomeViewController: UIViewController {
     }
     
     private func setupViews() {
-//        if let email = Auth.auth().currentUser?.email{
-//            emailLabel.text = "Welcome, \(email)"
-//        } else {
-//            emailLabel.text = "Something is wrong"
-//        }
+        if let email = Auth.auth().currentUser?.email{
+            emailLabel.text = "\(email)"
+        } else {
+            emailLabel.text = "Something is wrong"
+        }
         
         if let value = UDM.shared.defaults.value(forKey: "username") as? String {
                 userNameLabel.text =

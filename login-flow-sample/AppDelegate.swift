@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Iterable
         let config = IterableConfig()
         IterableAPI.initialize(apiKey: "024723d47b984f51b2330aada8f09f45", launchOptions: launchOptions, config: config)
-        IterableAPI.email = "michaeljbenefiel+usertest2@gmail.com"
+        
         config.inAppDisplayInterval = 1000.0
         
         return true

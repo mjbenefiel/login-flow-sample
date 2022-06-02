@@ -87,23 +87,34 @@
                                 <color key="textColor" red="0.27843137254901962" green="0.27843137254901962" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="0.0" green="0.1137254902" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUU-Qa-FlX">
+                                <rect key="frame" x="24" y="499" width="366" height="37"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="32"/>
+                                <color key="textColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.0" green="0.1137254902" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eeg-MT-46r"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="W0l-fH-2uZ" firstAttribute="leading" secondItem="eeg-MT-46r" secondAttribute="leading" constant="24" id="9UV-nw-87l"/>
+                            <constraint firstItem="eeg-MT-46r" firstAttribute="trailing" secondItem="rUU-Qa-FlX" secondAttribute="trailing" constant="24" id="Nho-Qg-Pxn"/>
                             <constraint firstItem="N9j-Jr-77x" firstAttribute="centerY" secondItem="sY2-Fg-iVb" secondAttribute="centerY" id="OfH-BN-Lvy"/>
                             <constraint firstItem="W0l-fH-2uZ" firstAttribute="top" secondItem="eeg-MT-46r" secondAttribute="top" constant="220" id="ala-d6-x1A"/>
                             <constraint firstItem="eeg-MT-46r" firstAttribute="trailing" secondItem="N9j-Jr-77x" secondAttribute="trailing" constant="24" id="beW-Dc-RLm"/>
+                            <constraint firstItem="rUU-Qa-FlX" firstAttribute="top" secondItem="N9j-Jr-77x" secondAttribute="bottom" constant="32.5" id="gEv-24-V22"/>
                             <constraint firstItem="W0l-fH-2uZ" firstAttribute="leading" secondItem="eeg-MT-46r" secondAttribute="leading" constant="24" id="gnF-J8-cJV"/>
+                            <constraint firstItem="eeg-MT-46r" firstAttribute="bottom" secondItem="rUU-Qa-FlX" secondAttribute="bottom" constant="277" id="hCj-4b-yBq"/>
                             <constraint firstItem="eeg-MT-46r" firstAttribute="trailing" secondItem="W0l-fH-2uZ" secondAttribute="trailing" constant="24" id="hpb-qH-5W9"/>
                             <constraint firstItem="N9j-Jr-77x" firstAttribute="leading" secondItem="eeg-MT-46r" secondAttribute="leading" constant="24" id="i0h-mf-Ud4"/>
                             <constraint firstItem="N9j-Jr-77x" firstAttribute="centerX" secondItem="sY2-Fg-iVb" secondAttribute="centerX" id="qQv-VX-Le6"/>
                             <constraint firstItem="eeg-MT-46r" firstAttribute="trailing" secondItem="W0l-fH-2uZ" secondAttribute="trailing" constant="24" id="rQJ-SK-aXj"/>
+                            <constraint firstItem="rUU-Qa-FlX" firstAttribute="leading" secondItem="eeg-MT-46r" secondAttribute="leading" constant="24" id="xxG-Sj-o3e"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Nmz-ho-hVf"/>
                     <connections>
+                        <outlet property="emailLabel" destination="rUU-Qa-FlX" id="woS-rX-PrR"/>
                         <outlet property="userNameLabel" destination="N9j-Jr-77x" id="xeR-ZS-C8v"/>
                     </connections>
                 </viewController>
@@ -339,8 +350,10 @@
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
+                                            <action selector="itblSignUpEvent:" destination="Y1e-ap-GGE" eventType="touchUpInside" id="eMW-jZ-I1l"/>
                                             <action selector="signUpButtonTap:" destination="Y1e-ap-GGE" eventType="touchUpInside" id="8KQ-Xh-AC4"/>
                                             <action selector="textFieldShouldReturnWithSender:" destination="Y1e-ap-GGE" eventType="touchUpInside" id="kfW-PK-MI4"/>
+                                            <action selector="updatedUserProfile:" destination="Y1e-ap-GGE" eventType="touchUpInside" id="edU-i4-dhz"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I95-vy-JZs">
@@ -355,6 +368,7 @@
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
+                                            <action selector="itblLoginEvent:" destination="Y1e-ap-GGE" eventType="touchUpInside" id="e6M-nR-1Ly"/>
                                             <action selector="loginButtonTap:" destination="Y1e-ap-GGE" eventType="touchUpInside" id="YIZ-XH-Lp6"/>
                                             <action selector="updatedUserProfile:" destination="Y1e-ap-GGE" eventType="touchUpInside" id="LGj-Dd-klM"/>
                                         </connections>
