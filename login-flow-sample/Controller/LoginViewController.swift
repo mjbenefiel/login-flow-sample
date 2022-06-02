@@ -176,6 +176,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func updatedUserProfile(_ sender: UIButton) {
+        IterableAPI.email = "michaeljbenefiel+usertest3@gmail.com"
         let dataField: [String: Any] = [
             "firstName": "Michael",
             "isRegisteredUser": true,
