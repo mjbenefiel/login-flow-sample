@@ -8,6 +8,7 @@ import UIKit
 import Firebase
 import CoreData
 import IterableSDK
+import UserNotifications
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,11 +24,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = UINavigationController(rootViewController: SettingsViewController1())
         //Iterable
         let config = IterableConfig()
+        config.pushIntegrationName = "com.mjb.login-flow-sample"
         IterableAPI.initialize(apiKey: "024723d47b984f51b2330aada8f09f45", launchOptions: launchOptions, config: config)
         
         config.inAppDisplayInterval = 1000.0
         
+        registerForPushNotifications()
+        
         return true
+    }
+    
+    func registerForPushNotifications() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {(granted, error) in
+            if granted {
+                DispatchQueue.main.async() {
+                    UIApplication.shared.registerForRemoteNotifications()
+                }
+            }
+        })
     }
     
     private func setupGlobalViews(){
@@ -99,5 +113,53 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+    // MARK: Notification
+        
+        // ITBL:
+        func application(_: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+            IterableAPI.register(token: deviceToken)
+        }
+        
+        func application(_: UIApplication, didFailToRegisterForRemoteNotificationsWithError _: Error) {}
+        // ITBL:
+        // Ask for permission for notifications etc.
+        // setup self as delegate to listen to push notifications.
+        private func setupNotifications() {
+            UNUserNotificationCenter.current().delegate = self
+            UNUserNotificationCenter.current().getNotificationSettings { settings in
+                if settings.authorizationStatus != .authorized {
+                    // not authorized, ask for permission
+                    UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, _ in
+                        if success {
+                            DispatchQueue.main.async {
+                                UIApplication.shared.registerForRemoteNotifications()
+                            }
+                        }
+                        // TODO: Handle error etc.
+                    }
+                } else {
+                    // already authorized
+                    DispatchQueue.main.async {
+                        UIApplication.shared.registerForRemoteNotifications()
+                    }
+                }
+            }
+        }
+
     
 }
+
+// MARK: UNUserNotificationCenterDelegate
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    public func userNotificationCenter(_: UNUserNotificationCenter, willPresent _: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.banner, .badge, .sound])
+    }
+    
+    // The method will be called on the delegate when the user responded to the notification by opening the application, dismissing the notification or choosing a UNNotificationAction. The delegate must be set before the application returns from applicationDidFinishLaunching:.
+    public func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        // ITBL:
+        IterableAppIntegration.userNotificationCenter(center, didReceive: response, withCompletionHandler: completionHandler)
+    }
+}
+
+
