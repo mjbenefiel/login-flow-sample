@@ -116,6 +116,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: Notification
         
         // ITBL:
+    //Silent push
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        IterableAppIntegration.application(application, didReceiveRemoteNotification: userInfo, fetchCompletionHandler: completionHandler)
+    }
         func application(_: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
             IterableAPI.register(token: deviceToken)
         }
